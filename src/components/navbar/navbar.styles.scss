@@ -1,20 +1,64 @@
 @import "../../assets/colors";
 
-@mixin site-nav-size {
+@media (max-width: 679px) {
+  .navbar-container {
+    height: 3.5em;
+
+    grid-template-columns:
+      minmax(1fr, 3em) minmax(1fr, 3em) minmax(1fr, 3em) minmax(1fr, 3em)
+      minmax(1fr, 3em);
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      ". logo logo sitenav ."
+      "roomnav roomnav roomnav roomnav roomnav";
+    // ". . . . .";
+
+    // .site-nav {
+    //   background-color: red;
+    //   padding: 0;
+
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: flex-start;
+    //   align-items: center;
+    // }
+    // .logo-container {
+    //   justify-content: flex-end;
+    // }
+
+    .room-nav {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 680px) {
+  .navbar-container {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "logo roomnav sitenav";
+  }
+}
+
+@mixin bubble-properties {
+  background-color: $item;
+
   width: 1.5em;
   height: 1.5em;
-  border-radius: 1em;
-  margin-left: 0.3em;
+  border-radius: 2em;
+  // margin-left: 0.3em;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 @mixin rotateAnimation {
+  cursor: pointer;
   transition-duration: 500ms;
-  transition-property: transform opacity;
+  transition-property: transform, opacity;
   &:hover {
-    cursor: pointer;
+    // cursor: pointer;
     transform: rotate(360deg);
   }
   &:active {
@@ -24,20 +68,28 @@
 }
 
 .navbar-container {
+  background-color: $blacklight;
   min-width: fit-content;
   width: 100%;
   height: 3.5em;
-  background-color: $blacklight;
+  padding: 0 1em;
+
+  box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-areas: "logo roomnav sitenav";
+  // grid-template-columns: 1fr 4fr 1fr;
+  // grid-template-areas: "logo roomnav sitenav";
 
   // border-bottom: 0.15em solid $greenmain;
 
   .logo-container {
-    box-sizing: border-box;
     grid-area: logo;
+    // margin: 0 1em;
+    height: 3.5em;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +105,7 @@
     .me-dot-container {
       background-color: $blacklight;
       // padding: 0.5em;
-      transition-duration: 500ms;
-      transition-property: background-color;
+
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -83,30 +134,31 @@
   }
 
   .room-nav {
+    grid-area: roomnav;
+    height: 3.5em;
+
+    background-color: $blacklight;
     box-sizing: border-box;
 
-    grid-area: roomnav;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .item-container {
-      box-sizing: border-box;
+      background-color: $blacklight;
       width: 3em;
       height: 3em;
-      background-color: $blacklight;
       padding: 0.5em;
-      transition-duration: 500ms;
-      transition-property: background-color;
+
+      cursor: pointer;
+      box-sizing: border-box;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
       &:hover {
-        // background-color: $greenmain;
-        cursor: pointer;
-
         .item {
           transform: rotate(360deg);
           width: 2em;
@@ -114,57 +166,42 @@
         }
       }
 
-      &:active {
-        // background-color: rgb(106, 117, 144);
-        // border-bottom: 3px solid $greenmain;
-        // border-top: 3px solid $greenmain;
-        .item {
-          opacity: 50%;
-        }
-      }
       .item {
-        // box-sizing: border-box;
-
-        width: 1.5em;
-        height: 1.5em;
-        background-color: $item;
-        border-radius: 5em;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        transition-duration: 500ms;
-        transition-property: width, height, transform;
+        @include bubble-properties;
+        @include rotateAnimation;
       }
     }
   }
 
   .site-nav {
-    box-sizing: border-box;
     grid-area: sitenav;
+    height: 3.5em;
+
+    // margin: 0 1em;
+    // padding-right: 1em;
+
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-right: 1em;
 
     .page-drop-down {
-      @include site-nav-size;
-      background-color: $greenmain;
+      @include bubble-properties;
       @include rotateAnimation;
+      background-color: $greenmain;
     }
 
     .user-settings {
-      @include site-nav-size;
-      background-color: $yellowvibrant;
+      @include bubble-properties;
       @include rotateAnimation;
+      background-color: $yellowvibrant;
+      margin-left: 0.3em;
     }
 
     .logout-btn {
-      @include site-nav-size;
-      background-color: $redvibrant;
+      @include bubble-properties;
       @include rotateAnimation;
+      background-color: $redvibrant;
+      margin-left: 0.3em;
     }
   }
 }

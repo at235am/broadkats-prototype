@@ -38,6 +38,9 @@ const NavBar = () => (
       <div className="item-container">
         <div className="item"></div>
       </div>
+      <div className="item-container">
+        <div className="item"></div>
+      </div>
     </div>
     <div className="site-nav">
       <div className="page-drop-down">
