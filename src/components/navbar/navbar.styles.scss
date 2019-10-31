@@ -35,15 +35,19 @@
 }
 
 @mixin rotateAnimation {
-  cursor: pointer;
-  transition-duration: 500ms;
-  transition-property: transform, opacity;
-  &:hover {
-    transform: rotate(360deg);
-  }
-  &:active {
-    // transform: translateY(-0.5em);
-    opacity: 50%;
+  .icon-properties {
+    cursor: pointer;
+    transition-duration: 500ms;
+    transition-property: transform, opacity;
+    // transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 1.5);
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+    &:active {
+      // transform: translateY(-0.5em);
+      opacity: 50%;
+    }
   }
 }
 
@@ -108,7 +112,7 @@
       align-items: center;
 
       .circle {
-        align-items: flex-start;
+        align-items: center;
       }
     }
   }

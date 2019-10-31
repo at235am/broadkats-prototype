@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as NineDotIcon } from "../../assets/icons/nine-dots-solid.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-solid.svg";
@@ -12,21 +13,27 @@ import "./navbar.styles.scss";
 const NavBar = () => (
   <div className="navbar-container">
     {/* LOGO: */}
-    <div className="logo-container">
-      <div className="logo-text">BROADKATS</div>
+    <Link to="/login">
+      <div className="logo-container">
+        <div className="logo-text">BROADKATS</div>
 
-      <div className="me-dot-container">
-        <div className="circle">me</div>
+        <div className="me-dot-container">
+          <div className="circle">
+            <div className="icon-properties">me</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Link>
+
     {/* ROOM NAV */}
     <div className="room-nav">
       <div className="item-container">
-        <div className="circle">
-          <NineDotIcon className="icon-properties" width="15" />
-        </div>
+        <Link to="/lobby">
+          <div className="circle">
+            <NineDotIcon className="icon-properties" width="15" />
+          </div>
+        </Link>
       </div>
-
       <div className="item-container">
         <div className="circle">
           <SearchIcon className="icon-properties" width="15" />
@@ -37,15 +44,21 @@ const NavBar = () => (
           <PlusIcon className="icon-properties" width="15" />
         </div>
       </div>
-      <div className="item-container">
-        <div className="circle"></div>
-      </div>
-      <div className="item-container">
-        <div className="circle"></div>
-      </div>
-      <div className="item-container">
-        <div className="circle"></div>
-      </div>
+      <Link to="/room">
+        <div className="item-container">
+          <div className="circle"></div>
+        </div>
+      </Link>
+      <Link to="/room">
+        <div className="item-container">
+          <div className="circle"></div>
+        </div>
+      </Link>
+      <Link to="/room">
+        <div className="item-container">
+          <div className="circle"></div>
+        </div>
+      </Link>
     </div>
     {/* SITE NAV */}
     <div className="site-nav">
