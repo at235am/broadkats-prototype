@@ -1,11 +1,11 @@
 import React from "react";
 
-// import BarsIcon from "../../assets/icons/bars-solid";
-import BarsIcon from "../icons/three-bars.icon";
-import XIcon from "../icons/x.icon";
-import PeopleIcon from "../icons/people.icon";
-import ThreeCircleIcon from "../icons/three-circles.icon";
-import PlusIcon from "../icons/plus.icon";
+import { ReactComponent as NineDotIcon } from "../../assets/icons/nine-dots-solid.svg";
+import { ReactComponent as SearchIcon } from "../../assets/icons/search-solid.svg";
+import { ReactComponent as PlusIcon } from "../../assets/icons/plus-solid.svg";
+import { ReactComponent as BarsIcon } from "../../assets/icons/bars-solid.svg";
+import { ReactComponent as PeopleIcon } from "../../assets/icons/user-circle-solid.svg";
+import { ReactComponent as XIcon } from "../../assets/icons/times-solid.svg";
 
 import "./navbar.styles.scss";
 
@@ -21,7 +21,7 @@ const NavBar = () => (
     <div className="room-nav">
       <div className="item-container">
         <div className="item">
-          <ThreeCircleIcon fill="#353744" width="15" height="15" />
+          <NineDotIcon width="15" height="15" />
         </div>
       </div>
       <div className="item-container">
@@ -29,6 +29,7 @@ const NavBar = () => (
           <PlusIcon fill="#353744" width="15" height="15" />
         </div>
       </div>
+
       <div className="item-container">
         <div className="item"></div>
       </div>
