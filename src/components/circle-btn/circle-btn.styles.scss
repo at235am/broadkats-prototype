@@ -40,9 +40,11 @@
   color: $blacklight;
 
   .text {
-    // text-align: center;
-    // justify-self: flex-end;
-    // align-self: flex-start;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   & > * {
