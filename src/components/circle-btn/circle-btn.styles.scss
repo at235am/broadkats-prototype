@@ -17,18 +17,18 @@
   cursor: pointer;
 
   & > * {
-    // cursor: pointer;
-    transition-duration: 500ms;
-    transition-property: transform, opacity;
-    // transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 1.5);
+    transition-duration: 300ms;
+    transition-property: transform;
+  }
 
-    &:hover {
+  &:hover {
+    & > * {
       transform: rotate(360deg);
     }
-    &:active {
-      // transform: translateY(-0.5em);
-      opacity: 50%;
-    }
+  }
+
+  &:active {
+    opacity: 50%;
   }
 }
 
