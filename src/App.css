@@ -20,6 +20,12 @@
   overflow: auto;
 }
 
-a {
+/* removes dotted outline from a tags and other visual issues */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
   text-decoration: none;
 }

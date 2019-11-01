@@ -22,37 +22,6 @@
   }
 }
 
-@mixin circle-properties {
-  background-color: $item;
-
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 5em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin rotateAnimation {
-  cursor: pointer;
-
-  .icon-properties {
-    // cursor: pointer;
-    transition-duration: 500ms;
-    transition-property: transform, opacity;
-    // transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 1.5);
-
-    &:hover {
-      transform: rotate(360deg);
-    }
-    &:active {
-      // transform: translateY(-0.5em);
-      opacity: 50%;
-    }
-  }
-}
-
 .navbar-container {
   background-color: $blacklight;
   min-width: fit-content;
@@ -68,112 +37,65 @@
 
   // border-bottom: 0.15em solid $greenmain;
 
-  .circle {
-    @include circle-properties;
-    @include rotateAnimation;
-    font-weight: bold;
-    font-size: 1em;
-    color: $blacklight;
-  }
-
-  .icon-properties {
-    width: 15px;
-    height: 15px;
-    path {
-      fill: $blacklight;
-    }
-  }
-
-  .logo-container {
+  .logo-section {
     grid-area: logo;
-    // margin: 0 1em;
-    background-color: $blacklight;
-    height: 3.5em;
-
-    // box-sizing: border-box;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    .logo-text {
-      color: $greenmain;
-      font-size: 2em;
-      font-style: italic;
-      font-weight: bold;
-      margin-right: 0.2em;
-    }
-
-    .me-dot-container {
-      background-color: $blacklight;
-      // padding: 0.5em;
-
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      .circle {
-        align-items: center;
-      }
-    }
   }
 
   .room-nav {
     grid-area: roomnav;
 
-    background-color: $blacklight;
-    height: 3.5em;
-
-    // box-sizing: border-box;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .item-container {
-      background-color: $blacklight;
-      width: 3em;
-      height: 3em;
-      // padding: 0.5em;
+    .room-nav-btn {
+      margin: 0 0.15em;
+    }
 
-      // cursor: pointer;
-      // box-sizing: border-box;
+    .home-btn,
+    .search-btn,
+    .create-room-btn {
+      background-color: transparent;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+      &:hover {
+        background-color: $greenmain;
+        svg {
+          path {
+            fill: $blacklight;
+          }
+        }
+      }
+    }
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .search-btn {
+    }
+
+    .create-room-btn {
     }
   }
 
   .site-nav {
     grid-area: sitenav;
-    background-color: $blacklight;
-
-    height: 3.5em;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    .page-drop-down {
-      @include circle-properties;
-      @include rotateAnimation;
+    .more-pages-btn {
       margin: 0 0.15em;
-      background-color: $greenmain;
+      background-color: $greenvibrant;
     }
 
-    .user-settings {
-      @include circle-properties;
-      @include rotateAnimation;
+    .user-settings-btn {
       margin: 0 0.15em;
       background-color: $yellowvibrant;
     }
 
     .logout-btn {
-      @include circle-properties;
-      @include rotateAnimation;
       margin: 0 0.15em;
       background-color: $redvibrant;
     }
