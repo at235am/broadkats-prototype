@@ -1,6 +1,6 @@
 
 #### View project (online) (not yet deployed):
-https://at235am.github.io/broadkats-me-website/
+https://broadkatsme.github.io/broadkats-me-website/
 
 #### To download and run locally:
 ```
