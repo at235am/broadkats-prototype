@@ -1,5 +1,5 @@
 
-#### View project (online) (not yet deployed):
+#### View project online:
 https://broadkatsme.github.io/broadkats-me-website/
 
 #### To download and run locally:
