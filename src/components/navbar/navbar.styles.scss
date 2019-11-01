@@ -35,8 +35,10 @@
 }
 
 @mixin rotateAnimation {
+  cursor: pointer;
+
   .icon-properties {
-    cursor: pointer;
+    // cursor: pointer;
     transition-duration: 500ms;
     transition-property: transform, opacity;
     // transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 1.5);
