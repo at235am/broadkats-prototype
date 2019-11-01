@@ -25,19 +25,28 @@ const NavBar = () => (
     {/* ROOM NAV */}
     <div className="room-nav">
       <Link to="/lobby">
-        <CircleBtn className="room-nav-btn home-btn" icon={<NineDotIcon />} />
+        <CircleBtn
+          className="room-nav-btn home-btn circle-hover"
+          icon={<NineDotIcon />}
+        />
       </Link>
 
-      <CircleBtn className="room-nav-btn search-btn" icon={<SearchIcon />} />
-      <CircleBtn className="room-nav-btn create-room-btn" icon={<PlusIcon />} />
+      <CircleBtn
+        className="room-nav-btn search-btn circle-hover"
+        icon={<SearchIcon />}
+      />
+      <CircleBtn
+        className="room-nav-btn create-room-btn circle-hover"
+        icon={<PlusIcon />}
+      />
       <Link to="/room">
-        <CircleBtn className="room-nav-btn" />
+        <CircleBtn className="room-nav-btn room-btn circle-hover" text="a" />
       </Link>
       <Link to="/room">
-        <CircleBtn className="room-nav-btn" />
+        <CircleBtn className="room-nav-btn room-btn circle-hover" text="b" />
       </Link>
       <Link to="/room">
-        <CircleBtn className="room-nav-btn" />
+        <CircleBtn className="room-nav-btn room-btn circle-hover" text="c" />
       </Link>
     </div>
 

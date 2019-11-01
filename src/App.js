@@ -5,7 +5,7 @@ import NavBar from "./components/navbar/navbar.component";
 import LoginRegisterPage from "./pages/login-register-page/login-register-page.component";
 import LobbyPage from "./pages/lobby-page/lobby-page.component";
 import RoomPage from "./pages/room-page/room-page.component";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

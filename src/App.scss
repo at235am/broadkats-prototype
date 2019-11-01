@@ -1,0 +1,30 @@
+@import "./assets/colors";
+
+.App {
+  // only one of these work at a time:
+  background-color: $greenmain;
+  background-image: $bggradient;
+
+  // our base font styles (subject to change):
+  font-family: "Open Sans Condensed";
+  font-size: 18px;
+  color: white;
+
+  // ensures full width and height of the view with scroll support:
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+
+// removes dotted outline from link tags and other visual issues:
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}

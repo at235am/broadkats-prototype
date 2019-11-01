@@ -2,8 +2,6 @@
 
 @media (max-width: 679px) {
   .navbar-container {
-    // height: 3.5em;
-
     grid-template-columns:
       minmax(1fr, 3em) minmax(1fr, 3em) minmax(1fr, 3em) minmax(1fr, 3em)
       minmax(1fr, 3em);
@@ -26,16 +24,11 @@
   background-color: $blacklight;
   min-width: fit-content;
   width: 100%;
-  // height: 3.5em;
   padding: 0 1em;
 
   box-sizing: border-box;
 
   display: grid;
-  // grid-template-columns: 1fr 4fr 1fr;
-  // grid-template-areas: "logo roomnav sitenav";
-
-  // border-bottom: 0.15em solid $greenmain;
 
   .logo-section {
     grid-area: logo;
@@ -48,6 +41,12 @@
     justify-content: center;
     align-items: center;
 
+    .circle-hover {
+      &:hover {
+        background-color: $circlehovercolor;
+      }
+    }
+
     .room-nav-btn {
       margin: 0 0.15em;
     }
@@ -59,11 +58,10 @@
       svg {
         path {
           fill: $white;
-          stroke-width: 10;
         }
       }
       &:hover {
-        background-color: $greenmain;
+        background-color: $circlehovercolor;
         svg {
           path {
             fill: $blacklight;
