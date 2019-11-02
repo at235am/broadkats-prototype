@@ -5,7 +5,8 @@
   // background-color: $blacklight;
 
   // box-sizing: border-box;
-
+  width: -moz-fit-content; // firefox
+  // width: -webkit-fit-content; // chrome // unfortunately only one of these work at a time rn
   display: flex;
   justify-content: flex-start;
   align-items: center;
