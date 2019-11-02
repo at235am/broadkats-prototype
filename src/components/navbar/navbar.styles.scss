@@ -21,6 +21,9 @@
 }
 
 .navbar-container {
+  z-index: 5;
+  // position: absolute;
+  // grid-area: nav;
   background-color: $blacklight;
   min-width: fit-content;
   width: 100%;

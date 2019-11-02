@@ -1,8 +1,9 @@
 @import "../../assets/colors";
+@import "../../assets/dimension";
 
 .login-register-page {
-  width: 100%;
-  height: 100%;
+  max-height: calc(100% - #{$navbarheight});
+
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr;
@@ -13,12 +14,9 @@
     ". lr-panel ."
     ". . .";
 
-  align-items: center;
   justify-items: center;
-  // height: 100%;
-  // display: flex;
-  // justify-content: center;
   // align-items: center;
+
   .login-register-panel {
     grid-area: lr-panel;
 
