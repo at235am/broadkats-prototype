@@ -2,7 +2,7 @@
   "name": "broadkats-prototype",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://broadkatsme.github.io/broadkats-me-website/",
+  "homepage": "https://broadkats.me",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
