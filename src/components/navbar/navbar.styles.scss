@@ -1,5 +1,5 @@
 @import "../../assets/colors";
-
+@import "../../assets/dimension";
 @media (max-width: 679px) {
   .navbar-container {
     grid-template-columns:
@@ -21,13 +21,11 @@
 }
 
 .navbar-container {
-  z-index: 5;
-  // position: absolute;
-  // grid-area: nav;
   background-color: $blacklight;
-  min-width: fit-content;
+  height: $navbarheight;
+  min-width: -moz-fit-content;
   width: 100%;
-  padding: 0 1em;
+  padding: 0 0.5em;
 
   box-sizing: border-box;
 

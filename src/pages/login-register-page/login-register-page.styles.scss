@@ -2,10 +2,7 @@
 @import "../../assets/dimension";
 
 .login-register-page {
-  max-height: calc(100% - #{$navbarheight});
-
   display: grid;
-
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 
@@ -15,11 +12,8 @@
     ". . .";
 
   justify-items: center;
-  // align-items: center;
 
   .login-register-panel {
     grid-area: lr-panel;
-
-    // background-color: white;
   }
 }

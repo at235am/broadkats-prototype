@@ -10,7 +10,6 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      {/* <div className="main-flex-container"> */}
       <BrowserRouter>
         <NavBar />
         <Switch>
@@ -19,7 +18,6 @@ function App() {
           <Route path="/room" component={RoomPage} />
         </Switch>
       </BrowserRouter>
-      {/* </div> */}
     </div>
   );
 }
