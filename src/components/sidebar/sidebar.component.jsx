@@ -2,22 +2,8 @@ import React from "react";
 
 import "./sidebar.styles.scss";
 import CollapsibleContent from "../collapsible-content/collapsible-content.component";
-import { ReactComponent as BarsIcon } from "../../assets/icons/bars-solid.svg";
 
 class Sidebar extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  expand(){
-    let content = document.getElementById("sidebar-content");
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  }
 
   render() {
     return (

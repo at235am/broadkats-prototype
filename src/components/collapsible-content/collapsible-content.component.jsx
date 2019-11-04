@@ -5,10 +5,6 @@ import { ReactComponent as BarsIcon } from "../../assets/icons/bars-solid.svg";
 
 class CollapsibleContent extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   expand(){
     let content = document.getElementById( this.props.id );
     if (content.style.maxHeight){
