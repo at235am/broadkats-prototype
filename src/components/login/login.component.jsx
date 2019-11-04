@@ -1,9 +1,6 @@
 import React from "react";
 
-// import { ReactComponent as Logo } from "../../assets/crown.svg";
-// import Logo from "../logo/logo.components";
 import Logo from "../logo/logo.component";
-
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
@@ -48,8 +45,35 @@ class LogIn extends React.Component {
             broadkats<span className="suffix">.me</span>
           </h1>
         </div> */}
-        <Logo className="logo-container"></Logo>
-        <form onSubmit={this.handleSubmit}>
+        <form className="form-container" onSubmit={this.handleSubmit}>
+          <Logo className="logo-container"></Logo>
+          <FormInput
+            className="email-field"
+            name="email"
+            type="email"
+            handleChange={this.handleChange}
+            value={this.state.email}
+            label="email"
+            required
+          />
+
+          <FormInput
+            className="password-field"
+            name="password"
+            type="password"
+            handleChange={this.handleChange}
+            value={this.state.password}
+            label="password"
+            required
+          />
+          <CustomButton className="login-btn" type="submit">
+            login
+          </CustomButton>
+          <CustomButton className="google-login-btn" type="submit">
+            login w/ google
+          </CustomButton>
+        </form>
+        {/* <form onSubmit={this.handleSubmit}>
           <FormInput
             name="email"
             type="email"
@@ -72,7 +96,7 @@ class LogIn extends React.Component {
           <CustomButton className="button" type="submit">
             Register
           </CustomButton>
-        </form>
+        </form> */}
       </div>
     );
   }
