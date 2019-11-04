@@ -18,12 +18,14 @@
   right: 0;
   overflow: auto;
 
-  // ensures a correct height for all pages while accounting for the nav bar:
-  display: grid;
+  // ensures that each page extends fully and solves navigation issues:
+  // this solution is better than using calc() and a navheight var
+  // but might have issues when see have a side panel
+  display: flex;
+  flex-flow: column;
   height: 100%;
-  grid-template-rows: auto 100%;
-  & > *:last-child {
-    height: calc(100% - #{$navbarheight});
+  & > *:not(.navbar-container) {
+    flex-grow: 1;
   }
 }
 
