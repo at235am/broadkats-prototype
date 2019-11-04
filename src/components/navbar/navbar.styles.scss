@@ -44,7 +44,10 @@
 
     .circle-hover {
       &:hover {
-        background-color: $circlehovercolor;
+        background-color: $greenmain;
+        * {
+          color: $white;
+        }
       }
     }
 
