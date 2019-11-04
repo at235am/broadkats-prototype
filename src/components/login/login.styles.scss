@@ -9,48 +9,43 @@
     display: grid;
     grid-template-columns: minmax(100%, 20em);
     grid-template-rows: repeat(5, auto);
-    grid-gap: 1em;
+    // grid-gap: 1em;
 
     grid-template-areas:
-      "logo"
       "email"
       "password"
       "loginbtn"
-      "glogin-btn";
-
-    .logo-container {
-      grid-area: logo;
-    }
+      "glogin-btn"
+      "forgot-pw";
 
     .email-field {
       grid-area: email;
+      margin-bottom: 1em;
     }
 
     .password-field {
       grid-area: password;
+      margin-bottom: 2em;
     }
 
     .login-btn {
       grid-area: loginbtn;
+      margin-bottom: 1em;
     }
 
     .google-login-btn {
       grid-area: glogin-btn;
+      margin-bottom: 1em;
+    }
+
+    .forgot-pw {
+      grid-area: forgot-pw;
+      text-decoration: upper-case;
+      color: white;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
     }
   }
-  // .button {
-  //   background-color: $greenmain;
-  //   color: white;
-  //   text-transform: uppercase;
-  //   font-family: "Open Sans Condensed";
-  //   font-weight: bolder;
-  //   border: none;
-  //   cursor: pointer;
-
-  //   &:hover {
-  //     background-color: $white;
-  //     color: black;
-  //     // border: 1px solid black;
-  //   }
-  // }
 }

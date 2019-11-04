@@ -1,0 +1,28 @@
+@import "../../assets/colors";
+
+.login-register-panel {
+  background-color: $blacklight;
+  padding: 2em;
+
+  width: 15em;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+
+  grid-template-areas:
+    "options"
+    "log"
+    "mainfields";
+
+  .tab-options {
+    grid-area: options;
+  }
+  .logo-container {
+    grid-area: logo;
+  }
+
+  .fields {
+    grid-area: mainfields;
+  }
+}

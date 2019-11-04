@@ -46,7 +46,7 @@ class LogIn extends React.Component {
           </h1>
         </div> */}
         <form className="form-container" onSubmit={this.handleSubmit}>
-          <Logo className="logo-container"></Logo>
+          {/* <Logo className="logo-container"></Logo> */}
           <FormInput
             className="email-field"
             name="email"
@@ -66,12 +66,18 @@ class LogIn extends React.Component {
             label="password"
             required
           />
+
           <CustomButton className="login-btn" type="submit">
             login
           </CustomButton>
+
           <CustomButton className="google-login-btn" type="submit">
             login w/ google
           </CustomButton>
+
+          <a className="forgot-pw" href="/login">
+            forgot password?
+          </a>
         </form>
         {/* <form onSubmit={this.handleSubmit}>
           <FormInput

@@ -2,11 +2,14 @@
 @import "../../assets/dimension";
 @mixin shrinkLabel {
   top: -1.45em;
-  left: 2px;
+  left: 0.1em;
 
   font-size: 12px;
   font-weight: bold;
   color: white;
+  letter-spacing: 0;
+
+  // letter-spacing: auto;
 }
 
 .input-field {
@@ -15,18 +18,17 @@
   margin-top: 1em;
 
   .form-input {
-    box-sizing: border-box;
-    height: $defaultbtnheight;
-    font-family: "Open Sans Condensed";
-    color: $black3;
-
-    background: none;
     background-color: $white;
-    font-size: 0.9em;
-    font-weight: bold;
-
-    display: block;
+    height: $defaultbtnheight;
     width: 100%;
+    box-sizing: border-box;
+    padding-left: 0.5em;
+
+    font-family: "Open Sans Condensed";
+    font-weight: bold;
+    color: $black3;
+    font-size: 0.9em;
+
     border: none;
     border-radius: 0;
     border-bottom: 5px solid $greenmain;
@@ -58,6 +60,8 @@
     color: $blackdark;
     font-size: 0.9em;
     font-weight: normal;
+    letter-spacing: 0.05em;
+
     position: absolute;
     pointer-events: none;
     left: 0.5em;
