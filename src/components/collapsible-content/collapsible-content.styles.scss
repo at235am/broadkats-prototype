@@ -1,0 +1,32 @@
+@import "../../assets/colors.scss";
+@import "../../assets/dimensions.scss";
+
+.content-container {
+	.content-header {
+		height: 50px;
+		text-align: center;
+		color: white;
+		font-size: 200%;
+		background-color: $blacklight;
+
+		.content-expand-button {
+			cursor: pointer;
+		  width: 10%;
+		  margin: 0 0 0 20px;
+
+		  path {
+				fill: white;
+			}
+		}
+	}
+
+	.content {
+		vertical-align: middle;
+		text-align: center;
+		background-color:$black4;
+
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+}
