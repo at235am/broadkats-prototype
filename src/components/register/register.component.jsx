@@ -1,18 +1,19 @@
 import React from "react";
 
-import Logo from "../logo/logo.component";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-import "./login.styles.scss";
+import "./register.styles.scss";
 
-class LogIn extends React.Component {
+class Register extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      username: "",
       email: "",
-      password: ""
+      password: "",
+      password2: ""
     };
   }
 
@@ -31,11 +32,21 @@ class LogIn extends React.Component {
   render() {
     return (
       <div
-        className={`login-container ${
+        className={`register-container ${
           this.props.className ? this.props.className : ""
         }`}
       >
         <form className="form-container" onSubmit={this.handleSubmit}>
+          <FormInput
+            className="username-field"
+            name="username"
+            type="username"
+            handleChange={this.handleChange}
+            value={this.state.username}
+            label="username"
+            required
+          />
+
           <FormInput
             className="email-field"
             name="email"
@@ -56,45 +67,23 @@ class LogIn extends React.Component {
             required
           />
 
-          <CustomButton className="login-btn" type="submit">
-            login
-          </CustomButton>
-
-          <CustomButton className="google-login-btn" type="submit">
-            google login
-          </CustomButton>
-
-          <a className="forgot-pw" href="/login">
-            forgot password?
-          </a>
-        </form>
-        {/* <form onSubmit={this.handleSubmit}>
           <FormInput
-            name="email"
-            type="email"
-            handleChange={this.handleChange}
-            value={this.state.email}
-            label="EMAIL"
-            required
-          />
-          <FormInput
-            name="password"
+            className="password-field2"
+            name="password2"
             type="password"
-            value={this.state.password}
             handleChange={this.handleChange}
-            label="PASSWORD"
+            value={this.state.password2}
+            label="confirm password"
             required
           />
-          <CustomButton className="button" type="submit">
-            Login
+
+          <CustomButton className="register-btn" type="submit">
+            register
           </CustomButton>
-          <CustomButton className="button" type="submit">
-            Register
-          </CustomButton>
-        </form> */}
+        </form>
       </div>
     );
   }
 }
 
-export default LogIn;
+export default Register;
