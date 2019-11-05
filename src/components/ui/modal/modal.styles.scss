@@ -1,0 +1,18 @@
+@import "../../../assets/colors";
+
+.modal {
+  background-color: $blackdark;
+
+  border: 1px solid $black3;
+  // border-radius: 1%;
+
+  // possibly change again
+  height: 30em;
+  width: 20em;
+
+  z-index: 400;
+
+  // unnecessary
+  box-sizing: border-box;
+  position: absolute;
+}

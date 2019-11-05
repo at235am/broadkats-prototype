@@ -1,0 +1,73 @@
+@import "../../assets/colors";
+@import "../../assets/dimension";
+@import "../../assets/font-stack";
+
+.room {
+  background-color: $black3;
+
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  top: 0;
+  left: 0;
+
+  display: grid;
+
+  grid-template-columns: 5% 90% 5% 0%;
+  grid-template-rows: 5% 7% 1% 82% 5%;
+
+  animation-name: color;
+  animation-duration: 5s;
+}
+
+.room-screen {
+  grid-column: 2;
+  grid-row: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-item {
+  grid-column: 2;
+  grid-row: 4;
+
+  height: 100%;
+  width: 100%;
+
+  z-index: 200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-page {
+  position: fixed;
+}
+
+.room-bar {
+  grid-column: 2;
+  grid-row: 2;
+
+  height: 100%;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes color {
+  from {
+    background-color: $greenmain;
+  }
+  to {
+    background-color: $black3;
+  }
+}

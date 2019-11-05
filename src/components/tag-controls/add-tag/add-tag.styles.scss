@@ -1,0 +1,44 @@
+@import "../../../assets/colors";
+@import "../../../assets/dimension";
+@import "../../../assets/font-stack";
+
+.add-tag {
+  background-color: transparent;
+
+  height: auto;
+  width: auto;
+
+  display: grid;
+
+  grid-template-columns: auto auto;
+  // change
+  grid-gap: 0.2em;
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  //change
+  margin: 1%;
+
+  box-sizing: border-box;
+}
+
+.add-tag input[type="text"] {
+  font-family: $fontfamily;
+  font-size: $tagsize;
+
+  // change
+  height: 0.5em;
+  width: 6em;
+
+  grid-column: 2;
+  grid-row: 1;
+}
+
+// unnecessary but better for explicit commenting
+// input/test later
+.tag-button {
+  grid-column: 1;
+  grid-row: 1;
+}

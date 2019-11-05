@@ -1,0 +1,21 @@
+@import "../../assets/colors";
+@import "../../assets/font-stack";
+
+.Tag {
+  background-color: transparent;
+
+  font-family: $fontfamily;
+  // 80% of tagsize - consider container component
+  font-size: $tagcontent;
+  color: $white;
+
+  // 100% - consider container component
+  height: 100%;
+  width: 100%;
+
+  padding: -2px 2px -2px 2px;
+
+  box-sizing: border-box;
+
+  border: 1px solid $greenmain;
+}
