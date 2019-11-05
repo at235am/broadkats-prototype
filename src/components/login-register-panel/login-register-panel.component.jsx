@@ -41,7 +41,7 @@ class LoginRegisterPanel extends React.Component {
         <div className="tab-options">
           <CustomButton
             className={`login-tab-btn ${
-              this.state.tabSelected == "login" ? "tabselected" : ""
+              this.state.tabSelected === "login" ? "tabselected" : ""
             }`}
             onClick={this.switchTab}
           >
@@ -49,7 +49,7 @@ class LoginRegisterPanel extends React.Component {
           </CustomButton>
           <CustomButton
             className={`register-tab-btn ${
-              this.state.tabSelected == "register" ? "tabselected" : ""
+              this.state.tabSelected === "register" ? "tabselected" : ""
             }`}
             onClick={this.switchTab}
           >

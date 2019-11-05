@@ -1,6 +1,5 @@
 import React from "react";
 
-import Logo from "../logo/logo.component";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
@@ -68,30 +67,6 @@ class LogIn extends React.Component {
             forgot password?
           </a>
         </form>
-        {/* <form onSubmit={this.handleSubmit}>
-          <FormInput
-            name="email"
-            type="email"
-            handleChange={this.handleChange}
-            value={this.state.email}
-            label="EMAIL"
-            required
-          />
-          <FormInput
-            name="password"
-            type="password"
-            value={this.state.password}
-            handleChange={this.handleChange}
-            label="PASSWORD"
-            required
-          />
-          <CustomButton className="button" type="submit">
-            Login
-          </CustomButton>
-          <CustomButton className="button" type="submit">
-            Register
-          </CustomButton>
-        </form> */}
       </div>
     );
   }
