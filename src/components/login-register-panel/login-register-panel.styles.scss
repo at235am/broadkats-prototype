@@ -16,11 +16,34 @@
     "logo"
     "mainfields";
 
+  border-top: 5px solid $greenmain;
+
   .tab-options {
     grid-area: options;
     width: 100%;
-    height: 3em;
+    height: 2em;
     background-color: #fff;
+    margin-bottom: 1em;
+
+    display: flex;
+    flex-flow: row;
+
+    .login-tab-btn,
+    .register-tab-btn {
+      flex-grow: 1;
+      height: 100%;
+      box-sizing: border-box;
+      background-color: #1f1f1f;
+      transition-duration: 300ms;
+      transition-property: border-bottom;
+
+      &:hover {
+        // background-color: $greenmain;
+        // background-color: transparent;
+        border-bottom: 37px solid $blacklight;
+      }
+      line-height: 3em;
+    }
   }
 
   .logo-area {

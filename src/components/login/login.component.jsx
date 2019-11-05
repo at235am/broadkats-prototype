@@ -61,7 +61,7 @@ class LogIn extends React.Component {
           </CustomButton>
 
           <CustomButton className="google-login-btn" type="submit">
-            login w/ google
+            google login
           </CustomButton>
 
           <a className="forgot-pw" href="/login">
