@@ -1,31 +1,64 @@
 @import "../../assets/colors.scss";
 @import "../../assets/dimensions.scss";
 
+.visible-true {
+	max-width: 100%;
+}
 
-.sidebar-container {
-	display: grid;
-
+.visible-false {
 	max-width: 1pc;
-	height: -moz-fit-content;
+}
+
+.sidebar{
+	display: grid;
+	width: $sidebarwidth;
+	height: 100%;
+
 	overflow: hidden;
 	transition: max-width .4s ease-in-out;
-	grid-template-columns: auto 1em;
 
 	.vertical-button {
-		grid-column: 2;
-		height: 100%;
 		width: 100%;
-		order: 1;
+		height: 100%;
+
 		cursor: pointer;
 		background-color: $blackdark;
 	}
 
 	.sidebar-content {
-		border-top: 5px solid $greenmain;
-		order: 0;
 		height: 100%;
-		background-color: $black4;
 
+		border-top: 5px solid $greenmain;
+		background-color: $black4;
+	}
+}
+
+.left {
+	float: left;
+	grid-template-columns: auto 1pc;
+
+	.vertical-button {
+		grid-column: 2;
+		order: 1;
 	}
 
+	.sidebar-content {
+		grid-column: 1;
+		order: 0;
+	}
+}
+
+.right {
+	float: right;
+	grid-template-columns: 1pc auto;
+
+	.vertical-button {
+		grid-column: 1;
+		order: 0
+	}
+
+	.sidebar-content {
+		grid-column: 2;
+		order: 1;
+	}
 }

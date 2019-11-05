@@ -7,18 +7,20 @@ import "./lobby-page.styles.scss";
 
 const LobbyPage = () => (
 	<div className="lobby-page">
-		<Sidebar className="left-sidebar-panel" visible="false">
-			<CollapsibleContent id="collapsible-activity" label="Activity"
-      			content={"WHATEVER"}
-      		/>
-      		<CollapsibleContent id="collapsible-friends" label="Friends"
-      			content={"WHATEVER2"}
-      		/>
+		<Sidebar side="left" visible="false">
+			<CollapsibleContent
+				id="collapsible-activity"
+				label="Activity"
+				content={"WHATEVER"}
+			/>
+			<CollapsibleContent
+				id="collapsible-friends"
+				label="Friends"
+				content={"WHATEVER2"}
+			/>
 		</Sidebar>
-		
-		<div className="lobby-content">
-			HELP
-		</div>
+
+		<div className="lobby-content">HELP</div>
 	</div>
 );
 
