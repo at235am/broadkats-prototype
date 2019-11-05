@@ -24,11 +24,12 @@
   transition-duration: 100ms;
   transition-property: border-bottom;
 
+  &:focus {
+    outline: 0;
+  }
+
   &:hover {
     border-bottom: 5px solid $greenmain;
-
-    // line-height: 0;
-
     // background-color: white;
     // color: black;
   }
