@@ -49,31 +49,32 @@ class RoomPage extends Component {
     ) : null;
 
     return (
-      <div className="room">
-          <Sidebar side="left" visible="false">
-            <CollapsibleContent id="collapsible-activity" label="Activity"
-                  content={"WHATEVER"}
-                />
-                <CollapsibleContent id="collapsible-friends" label="Friends"
-                  content={"WHATEVER2"}
-                />
-          </Sidebar>
-          <Sidebar side="right" visible="true">
-            <CollapsibleContent id="collapsible-CHAT" label="Chat"
-              content={"PEOPLE TALKING WILL GO HERE I GWUESS"}
-            />
-          </Sidebar>
+      <div className="room-container">
+        <Sidebar side="left" visible="false">
+          <CollapsibleContent id="collapsible-activity" label="Activity"
+            content={"WHATEVER"}
+          />
+          <CollapsibleContent id="collapsible-friends" label="Friends"
+            content={"WHATEVER2"}
+          />
+        </Sidebar>
+        <Sidebar side="right" visible="true">
+          <CollapsibleContent id="collapsible-CHAT" label="Chat"
+          content={"PEOPLE TALKING WILL GO HERE I GWUESS"}
+          />
+        </Sidebar>
 
-        {initmodal}
-        <RoomBar
-          className="room-bar"
-          roomName={this.state.roomName}
-          tags={this.state.tags}
-          toggleSettings={this.toggleSettings}
-          exit={this.exit}
-        />
-        <RoomScreen className="room-screen" />
-
+        <div className="room">
+          {initmodal}
+          <RoomBar
+            className="room-bar"
+            roomName={this.state.roomName}
+            tags={this.state.tags}
+            toggleSettings={this.toggleSettings}
+            exit={this.exit}
+          />
+          <RoomScreen className="room-screen" />
+        </div>
       </div>
     );
   }

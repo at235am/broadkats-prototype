@@ -36,6 +36,7 @@
 .left {
 	float: left;
 	grid-template-columns: auto 1pc;
+	order: 1;
 
 	.vertical-button {
 		grid-column: 2;
@@ -51,6 +52,7 @@
 .right {
 	float: right;
 	grid-template-columns: 1pc auto;
+	order: 3;
 
 	.vertical-button {
 		grid-column: 1;
