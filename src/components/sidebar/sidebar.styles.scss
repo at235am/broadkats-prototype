@@ -1,14 +1,6 @@
 @import "../../assets/colors.scss";
 @import "../../assets/dimensions.scss";
 
-.visible-true {
-	max-width: 100%;
-}
-
-.visible-false {
-	max-width: 1pc;
-}
-
 .sidebar{
 	display: grid;
 	width: $sidebarwidth;
@@ -31,6 +23,14 @@
 		border-top: 5px solid $greenmain;
 		background-color: $black4;
 	}
+}
+
+.visible-true {
+	max-width: 100%;
+}
+
+.visible-false {
+	max-width: 1pc;
 }
 
 .left {

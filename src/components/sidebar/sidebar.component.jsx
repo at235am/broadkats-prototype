@@ -3,43 +3,34 @@ import React from "react";
 import "./sidebar.styles.scss";
 
 class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: false
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			visible: this.props.visible === "true",
+			side: this.props.side,
+			classes: "",
+		};
+	}
 
-  componentDidMount() {
-    if (this.props.visible === "true") {
-      this.setState({ visible: true });
-    }
-  }
+	componentDidMount() {
+		this.setState({ classes: `sidebar ${this.state.side} visible-${this.state.visible}` });
+	}
 
-  expand() {
-    let container = document.getElementById(`sidebar-${this.props.side}`);
-    this.setState({ visible: !this.state.visible });
+	expand() {
+		this.setState({ classes: `sidebar ${this.state.side} visible-${!this.state.visible}`})
+		this.setState({ visible: !this.state.visible });
+	}
 
-    if (!this.state.visible) {
-      container.style.maxWidth = "100%";
-    } else {
-      container.style.maxWidth = "1pc";
-    }
-  }
-
-  render() {
-    return (
-      <div
-        id={`sidebar-${this.props.side}`}
-        className={`sidebar ${this.props.side} visible-${this.props.visible}`}
-      >
-        <span className="vertical-button" onClick={this.expand.bind(this)} />
-        <div className="sidebar-content">
-          {this.state.visible && this.props.children}
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className= {this.state.classes}>
+				<span className="vertical-button" onClick={this.expand.bind(this)} />
+				<div className="sidebar-content">
+					{this.state.visible && this.props.children}
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Sidebar;
