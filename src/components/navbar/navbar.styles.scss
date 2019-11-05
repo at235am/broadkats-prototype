@@ -21,8 +21,7 @@
 }
 
 .navbar-container {
-  background-color: $blacklight;
-  height: $navbarheight;
+  background-color: $black5;
   min-width: -moz-fit-content;
   width: 100%;
   padding: 0 0.5em;
@@ -44,7 +43,10 @@
 
     .circle-hover {
       &:hover {
-        background-color: $circlehovercolor;
+        background-color: $greenmain;
+        * {
+          color: $white;
+        }
       }
     }
 

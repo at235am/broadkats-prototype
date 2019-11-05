@@ -1,9 +1,6 @@
 import React from "react";
 
-// import { ReactComponent as Logo } from "../../assets/crown.svg";
-// import Logo from "../logo/logo.components";
 import Logo from "../logo/logo.component";
-
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
@@ -38,18 +35,40 @@ class LogIn extends React.Component {
           this.props.className ? this.props.className : ""
         }`}
       >
-        {/* <h2>I already have an account</h2> */}
-        {/* <span>Sign in with your email and password</span> */}
-        {/* <div className="logo-container">
-          <div className="logo">
-            <Logo />
-          </div>
-          <h1 className="logo-text">
-            broadkats<span className="suffix">.me</span>
-          </h1>
-        </div> */}
-        <Logo className="logo-container"></Logo>
-        <form onSubmit={this.handleSubmit}>
+        <form className="form-container" onSubmit={this.handleSubmit}>
+          <FormInput
+            className="email-field"
+            name="email"
+            type="email"
+            handleChange={this.handleChange}
+            value={this.state.email}
+            label="email"
+            required
+          />
+
+          <FormInput
+            className="password-field"
+            name="password"
+            type="password"
+            handleChange={this.handleChange}
+            value={this.state.password}
+            label="password"
+            required
+          />
+
+          <CustomButton className="login-btn" type="submit">
+            login
+          </CustomButton>
+
+          <CustomButton className="google-login-btn" type="submit">
+            google login
+          </CustomButton>
+
+          <a className="forgot-pw" href="/login">
+            forgot password?
+          </a>
+        </form>
+        {/* <form onSubmit={this.handleSubmit}>
           <FormInput
             name="email"
             type="email"
@@ -72,7 +91,7 @@ class LogIn extends React.Component {
           <CustomButton className="button" type="submit">
             Register
           </CustomButton>
-        </form>
+        </form> */}
       </div>
     );
   }

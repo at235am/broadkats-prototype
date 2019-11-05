@@ -18,7 +18,7 @@
 
   & > * {
     transition-duration: 300ms;
-    transition-property: transform;
+    transition-property: transform background-color;
   }
 
   &:hover {
@@ -28,7 +28,7 @@
   }
 
   &:active {
-    opacity: 50%;
+    background-color: #ffffff;
   }
 }
 

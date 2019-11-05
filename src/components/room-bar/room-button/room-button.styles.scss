@@ -1,0 +1,34 @@
+@import "../../../assets/colors";
+@import "../../../assets/dimension";
+
+.room-button {
+  background-color: $greenmain;
+
+  height: $roombuttonsize;
+  width: $roombuttonsize;
+
+  border: none;
+  border-radius: 50%;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+
+.room-button img {
+  height: 100%;
+  width: 100%;
+
+  padding: 20%;
+
+  box-sizing: border-box;
+}
+
+.room-button:hover {
+  background-color: $greenhighlight;
+
+  cursor: pointer;
+}

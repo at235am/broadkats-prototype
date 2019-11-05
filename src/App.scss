@@ -2,7 +2,7 @@
 @import "./assets/dimensions";
 .App {
   // only one of these work at a time:
-  background-color: $greenmain;
+  background-color: #3d3e44;
   background-image: $bggradient;
 
   // our base font styles (subject to change):
@@ -38,4 +38,5 @@ a:hover,
 a:active {
   outline: 0;
   text-decoration: none;
+  color: white;
 }
