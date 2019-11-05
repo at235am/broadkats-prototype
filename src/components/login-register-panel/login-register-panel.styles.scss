@@ -1,7 +1,22 @@
 @import "../../assets/colors";
 
+@mixin tab-properties {
+  flex-grow: 1;
+  height: 100%;
+  // box-sizing: border-box;
+  background-color: #1f1f1f;
+  transition-duration: 300ms;
+  transition-property: border-bottom;
+  line-height: 2.9em;
+
+  &:hover {
+    background-color: $black5;
+    border-bottom: none;
+  }
+}
+
 .login-register-panel {
-  background-color: $blacklight;
+  background-color: $black5;
 
   width: auto;
 
@@ -16,33 +31,30 @@
     "logo"
     "mainfields";
 
-  border-top: 5px solid $greenmain;
+  border-radius: 5px;
 
   .tab-options {
     grid-area: options;
     width: 100%;
     height: 2em;
-    background-color: #fff;
     margin-bottom: 1em;
 
     display: flex;
     flex-flow: row;
+    justify-content: center;
+    align-items: center;
 
-    .login-tab-btn,
+    .login-tab-btn {
+      @include tab-properties;
+      border-radius: 5px 0 0 0;
+    }
+
     .register-tab-btn {
-      flex-grow: 1;
-      height: 100%;
-      box-sizing: border-box;
-      background-color: #1f1f1f;
-      transition-duration: 300ms;
-      transition-property: border-bottom;
-
-      &:hover {
-        // background-color: $greenmain;
-        // background-color: transparent;
-        border-bottom: 37px solid $blacklight;
-      }
-      line-height: 3em;
+      @include tab-properties;
+      border-radius: 0 5px 0 0;
+    }
+    .tabselected {
+      background-color: $black5;
     }
   }
 

@@ -1,6 +1,8 @@
 import React from "react";
 
 import LogIn from "../login/login.component";
+import Register from "../register/register.component";
+
 import Logo from "../logo/logo.component";
 import CustomButton from "../custom-button/custom-button.component";
 import "./login-register-panel.styles.scss";
@@ -10,22 +12,26 @@ class LoginRegisterPanel extends React.Component {
     super(props);
 
     this.state = {
-      tabSelected: ""
+      tabSelected: "login",
+      panelRendered: <LogIn className="fields" />
     };
   }
 
-  switchTo = event => {
+  switchTab = event => {
     let componentToUse = "";
+    let selectedTab = "";
+
     if (event.target.className.includes("login-tab-btn")) {
-      console.log("login");
+      selectedTab = "login";
       componentToUse = <LogIn className="fields" />;
     } else {
-      console.log("register");
-      componentToUse = <div className="hello fields">sdfsdf</div>;
+      selectedTab = "register";
+      componentToUse = <Register className="fields"></Register>;
     }
 
     this.setState({
-      tabSelected: componentToUse
+      tabSelected: selectedTab,
+      panelRendered: componentToUse
     });
   };
 
@@ -33,10 +39,20 @@ class LoginRegisterPanel extends React.Component {
     return (
       <div className="login-register-panel">
         <div className="tab-options">
-          <CustomButton className="login-tab-btn" onClick={this.switchTo}>
+          <CustomButton
+            className={`login-tab-btn ${
+              this.state.tabSelected == "login" ? "tabselected" : ""
+            }`}
+            onClick={this.switchTab}
+          >
             Login
           </CustomButton>
-          <CustomButton className="register-tab-btn" onClick={this.switchTo}>
+          <CustomButton
+            className={`register-tab-btn ${
+              this.state.tabSelected == "register" ? "tabselected" : ""
+            }`}
+            onClick={this.switchTab}
+          >
             Register
           </CustomButton>
 
@@ -44,7 +60,7 @@ class LoginRegisterPanel extends React.Component {
           {/* <div className="register-tab-btn" onclic></div> */}
         </div>
         <Logo className="logo-area" />
-        {this.state.tabSelected}
+        {this.state.panelRendered}
       </div>
     );
   }
