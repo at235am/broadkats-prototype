@@ -5,14 +5,19 @@
   display: flex;
   flex-direction: row;
 
-  .sidebar-panel {
-  	order: 0;
-  	width: $sidebarwidth;
+  .left-sidebar-panel {
+    order: 0;
+    width: $sidebarwidth;
   }
 
   .lobby-content {
-  	order: 1;
-  	width: 100%;
-  	height: 100%;
+    order: 1;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .right-sidebar-panel {
+    order: 2;
+    width: $sidebarwidth;
   }
 }

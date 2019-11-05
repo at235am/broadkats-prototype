@@ -17,6 +17,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
+  overflow-x: hidden;
 
   // ensures that each page extends fully and solves navigation issues:
   // this solution is better than using calc() and a navheight var

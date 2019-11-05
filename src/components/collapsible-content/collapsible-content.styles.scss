@@ -2,6 +2,7 @@
 @import "../../assets/dimensions.scss";
 
 .content-container {
+	visibility: visible;
 	.content-header {
 		height: 50px;
 		text-align: center;
@@ -21,11 +22,9 @@
 	}
 
 	.content {
-		vertical-align: middle;
-		text-align: center;
 		background-color:$black4;
 
-		max-height: 0;
+		max-height: 100%;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
 	}
