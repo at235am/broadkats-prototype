@@ -17,7 +17,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-
+  overflow-x: hidden;
   // ensures a correct height for all pages while accounting for the nav bar:
   display: grid;
   height: 100%;
