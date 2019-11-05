@@ -10,6 +10,7 @@ class RoomPage extends Component {
   state = {
     showInit: true,
     showSettings: true,
+    settings: ["Public Room"],
     tags: ["Horror", "Suspense", "Angst", "Thriller", "Romance", "NSFW"],
     roomName: "YUMMY"
   };
