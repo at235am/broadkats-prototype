@@ -1,0 +1,26 @@
+@import "../../../assets/colors";
+@import "../../../assets/dimension";
+@import "../../../assets/font-stack";
+
+.settings-panel {
+  height: auto;
+  width: auto;
+
+  display: flex;
+  flex-flow: column;
+
+  background-color: $black3;
+}
+
+.settings-label {
+  font-family: $fontfamily;
+  font-size: $generaltext;
+
+  height: 100%;
+  width: 100%;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}

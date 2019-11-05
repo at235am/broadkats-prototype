@@ -45,7 +45,7 @@ const roomBar = props => {
       </div>
 
       <div className="exit-button">
-        <RoomButton svg={exit}></RoomButton>
+        <RoomButton svg={exit} click={props.exit}></RoomButton>
       </div>
     </div>
   );
