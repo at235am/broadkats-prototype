@@ -1,9 +1,12 @@
 $greenmain: #50d19e;
 
+$offblack: #231f20;
+
 $blacklight: #353744;
 $blackdark: #2e2e31;
 $black3: #26262b;
 $black4: #404146;
+$black5: #2e2e31;
 
 $graydark: #b7b7b7;
 $graylight: #d9d9d9;
@@ -20,10 +23,16 @@ $greenvibrant: #50d19e;
 
 $item: #f5f5f5;
 
-$circlehovercolor: #cacaca;
+$circlehovercolor: #ffffff;
 
 $bggradient: linear-gradient(
   60deg,
   rgba(143, 185, 168, 1) 0%,
   rgba(118, 93, 105, 1) 100%
+);
+
+$btngradient: linear-gradient(
+  60deg,
+  rgb(0, 255, 153) 0%,
+  rgb(5, 228, 161) 100%
 );

@@ -1,24 +1,35 @@
 @import "../../assets/colors.scss";
+@import "../../assets/dimension";
 
 .custom-button {
-  min-width: 165px;
+  background-color: $offblack;
+  // background-image: $btngradient;
+  min-width: 5em;
   width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
+  height: $defaultbtnheight;
+
   font-family: "Open Sans Condensed";
-  font-weight: bolder;
+  font-weight: bold;
+  color: white;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 3.3em;
+
+  padding: 0;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
+
+  transition-duration: 100ms;
+  transition-property: border-bottom;
 
   &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    border-bottom: 5px solid $greenmain;
+
+    // line-height: 0;
+
+    // background-color: white;
+    // color: black;
   }
 }
