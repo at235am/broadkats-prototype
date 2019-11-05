@@ -35,18 +35,7 @@ class LogIn extends React.Component {
           this.props.className ? this.props.className : ""
         }`}
       >
-        {/* <h2>I already have an account</h2> */}
-        {/* <span>Sign in with your email and password</span> */}
-        {/* <div className="logo-container">
-          <div className="logo">
-            <Logo />
-          </div>
-          <h1 className="logo-text">
-            broadkats<span className="suffix">.me</span>
-          </h1>
-        </div> */}
         <form className="form-container" onSubmit={this.handleSubmit}>
-          {/* <Logo className="logo-container"></Logo> */}
           <FormInput
             className="email-field"
             name="email"

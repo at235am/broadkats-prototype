@@ -3,8 +3,8 @@
 .login-container {
   .form-container {
     background-color: $blacklight;
-    height: -moz-fit-content;
-    // width: 20em;
+    height: auto;
+    width: 15em;
 
     display: grid;
     grid-template-columns: minmax(100%, 20em);
