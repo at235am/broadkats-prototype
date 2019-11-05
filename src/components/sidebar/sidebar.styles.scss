@@ -2,15 +2,17 @@
 @import "../../assets/dimensions.scss";
 
 .sidebar-container {
-  position: relative;
-  width: 100%;
-  height: -moz-fit-content;
+	position: relative;
+	width: 100%;
+	margin-left: -($sidebarwidth*.95);
+	height: -moz-fit-content;
 
-  border-top: 5px solid $greenmain;
+	border-top: 5px solid $greenmain;
 
-  display: grid;
-  grid-template-columns: auto $sidebarwidth/15;
-  grid-template-rows: auto;
+	display: grid;
+	grid-template-columns: auto 7%;
+	grid-template-rows: auto;
+	transition: margin-left 0.2s ease-out;
 
 	.vertical-button{
 		width: 100%;

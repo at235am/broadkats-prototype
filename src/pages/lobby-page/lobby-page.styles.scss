@@ -2,13 +2,17 @@
 @import "../../assets/dimensions";
 
 .lobby-page {
-  display: grid;
-  grid-template-columns: $sidebarwidth auto;
-
-  grid-template-areas:
-    "sb-panel .";
+  display: flex;
+  flex-direction: row;
 
   .sidebar-panel {
-    grid-area: sb-panel;
+  	order: 0;
+  	width: $sidebarwidth;
+  }
+
+  .lobby-content {
+  	order: 1;
+  	width: 100%;
+  	height: 100%;
   }
 }

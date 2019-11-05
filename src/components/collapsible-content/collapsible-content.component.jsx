@@ -5,12 +5,21 @@ import { ReactComponent as BarsIcon } from "../../assets/icons/bars-solid.svg";
 
 class CollapsibleContent extends React.Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      collapsed: true,
+    };
+  }
+
   expand(){
     let content = document.getElementById( this.props.id );
-    if (content.style.maxHeight){
+    if (this.state.collapsed == false){
       content.style.maxHeight = null;
+      this.setState({collapsed: true})
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
+      this.setState({collapsed: false})
     }
   }
 

@@ -7,6 +7,7 @@ import "./lobby-page.styles.scss";
 const LobbyPage = () => (
 	<div className="lobby-page">
 		<Sidebar className="sidebar-panel"/>
+		<div className="lobby-content"> HELP</div>
 	</div>
 );
 
