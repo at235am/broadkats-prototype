@@ -1,34 +1,38 @@
 @import "../../assets/colors.scss";
+@import "../../assets/dimension";
 
 @mixin shrinkLabel {
-  top: -22px;
-  left: 2px;
+  top: -1.45em;
+  left: 0.1em;
 
   font-size: 12px;
   font-weight: bold;
   color: white;
+  letter-spacing: 0;
+
+  // letter-spacing: auto;
 }
 
-.group {
+.input-field {
   position: relative;
-  margin: 20px 0px 35px 0px;
+  outline: none;
+  margin-top: 1em;
 
   .form-input {
-    font-family: "Open Sans Condensed";
-    color: $black3;
-    box-sizing: border-box;
-    background: none;
     background-color: $white;
-    font-size: 18px;
-    font-weight: bold;
-
-    padding: 5px 10px 5px 10px;
-    display: block;
+    height: $defaultbtnheight;
     width: 100%;
+    box-sizing: border-box;
+    padding-left: 0.5em;
+
+    font-family: "Open Sans Condensed";
+    font-weight: bold;
+    color: $black3;
+    font-size: 0.9em;
+
     border: none;
     border-radius: 0;
-    border-bottom: 4px solid $greenmain;
-    margin: 20px 0px 0px 0px;
+    border-bottom: 5px solid $greenmain;
 
     &:focus {
       outline: none;
@@ -37,20 +41,32 @@
     &:focus ~ .form-input-label {
       @include shrinkLabel();
     }
+
+    &:required {
+      box-shadow: none;
+      // border-bottom: 5px solid $redvibrant;
+    }
+    &:invalid {
+      box-shadow: none;
+      // border-bottom: 5px solid $redvibrant;
+    }
   }
 
   input[type="password"] {
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
   }
 
   .form-input-label {
+    text-transform: uppercase;
     color: $blackdark;
-    font-size: 16px;
+    font-size: 0.9em;
     font-weight: normal;
+    letter-spacing: 0.05em;
+
     position: absolute;
     pointer-events: none;
-    left: 12px;
-    top: 7px;
+    left: 0.5em;
+    top: 0.4em;
     transition: 300ms ease all;
 
     &.shrink {

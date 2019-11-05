@@ -2,7 +2,7 @@
 @import "./assets/dimension";
 .App {
   // only one of these work at a time:
-  background-color: $greenmain;
+  background-color: #3d3e44;
   background-image: $bggradient;
 
   // our base font styles (subject to change):
@@ -17,13 +17,15 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  overflow-x: hidden;
-  // ensures a correct height for all pages while accounting for the nav bar:
-  display: grid;
+
+  // ensures that each page extends fully and solves navigation issues:
+  // this solution is better than using calc() and a navheight var
+  // but might have issues when see have a side panel
+  display: flex;
+  flex-flow: column;
   height: 100%;
-  grid-template-rows: auto 100%;
-  & > *:last-child {
-    height: calc(100% - #{$navbarheight});
+  & > *:not(.navbar-container) {
+    flex-grow: 1;
   }
 }
 
@@ -35,4 +37,5 @@ a:hover,
 a:active {
   outline: 0;
   text-decoration: none;
+  color: white;
 }

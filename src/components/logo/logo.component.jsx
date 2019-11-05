@@ -4,8 +4,8 @@ import CircleBtn from "../circle-btn/circle-btn.component";
 
 import "./logo.styles.scss";
 
-const Logo = () => (
-  <div className="logo-container">
+const Logo = ({ className, ...otherProps }) => (
+  <div className={`logo-container ${className ? className : ""}`}>
     <div className="logo-text">BROADKATS</div>
     <CircleBtn text="me" />
   </div>
