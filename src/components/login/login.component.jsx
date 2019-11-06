@@ -63,7 +63,6 @@ class LogIn extends React.Component {
 
           <CustomButton className="google-login-btn" type="submit">
             <GoogleLogoColorful />
-            <GoogleLogo />
             Google Login
           </CustomButton>
 

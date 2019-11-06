@@ -38,21 +38,9 @@
       grid-area: glogin-btn;
       margin-bottom: 1em;
 
-      svg:nth-child(1) {
-        // selects the first svg (colorful) inside the g login btn
+      svg {
         width: 1.5em;
         margin-right: 0.5em;
-        path {
-          fill: $white; // doesnt work since the google-logo-colorful.svg's path element has fill="hardcoded color"
-        }
-      }
-      svg:nth-child(2) {
-        // selects the second svg (plain) insde the g login btn
-        width: 1.5em;
-        margin-right: 0.5em;
-        path {
-          fill: $white; // works since google-logo.svg's path element has fill="currentColor"
-        }
       }
     }
 
