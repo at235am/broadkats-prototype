@@ -15,7 +15,7 @@
   }
 }
 
-.logo-container {
+.logo-h-container {
   grid-area: page;
   // margin: 0 1em;
   // background-color: $blacklight;
@@ -24,7 +24,8 @@
   width: -moz-fit-content; // firefox
   // width: -webkit-fit-content; // chrome // unfortunately only one of these work at a time rn
   display: flex;
-  flex-direction: column;
+  // background: white;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 
@@ -37,16 +38,15 @@
   }
 
   svg:nth-child(1) {
-    @include rotateAnimation;
-
-    width: 8em;
+    width: 3em;
     path {
       fill: $greenmain;
     }
+    @include rotateAnimation;
   }
 
   svg:nth-child(2) {
-    width: 7em;
+    width: 8em;
     path {
       fill: $greenmain;
     }
