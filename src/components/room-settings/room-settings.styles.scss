@@ -16,3 +16,11 @@
 .room-settings-content {
   grid-column: 2;
 }
+
+.room-settings-modal {
+  position: fixed;
+  background-color: $greenmain;
+
+  height: 100%;
+  width: 100%;
+}

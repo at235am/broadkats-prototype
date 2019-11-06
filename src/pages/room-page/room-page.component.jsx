@@ -3,7 +3,7 @@ import "./room-page.styles.scss";
 
 import RoomScreen from "../../components/room-screen/room-screen.component";
 import RoomBar from "../../components/room-bar/room-bar.component";
-import Modal from "../../components/ui/modal/modal.component";
+import RoomSettings from "../../components/room-settings/room-settings.component";
 import Init from "../../components/room-init/room-init.component";
 
 // Test imports
@@ -11,7 +11,7 @@ import Init from "../../components/room-init/room-init.component";
 class RoomPage extends Component {
   state = {
     showInit: true,
-    showSettings: true,
+    showSettings: false,
     settings: ["Public Room"],
     tags: ["Horror", "Suspense", "Angst", "Thriller", "Romance", "NSFW"],
     roomName: "YUMMY"
@@ -50,6 +50,12 @@ class RoomPage extends Component {
           exit={this.exit}
         />
         <RoomScreen className="room-screen-item" />
+        {this.state.showSettings && (
+          <RoomSettings
+            className="settings-page"
+            toggleSettings={this.toggleSettings}
+          ></RoomSettings>
+        )}
       </div>
     );
   }

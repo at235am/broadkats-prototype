@@ -37,7 +37,7 @@ const roomBar = props => {
       </div>
 
       <div className="settings-button">
-        <RoomButton svg={cog} toggle={props.toggleSettings}></RoomButton>
+        <RoomButton svg={cog} click={props.toggleSettings}></RoomButton>
       </div>
 
       <div className="refresh-button">

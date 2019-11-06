@@ -1,13 +1,16 @@
 import React from "react";
 import "./room-settings.styles.scss";
 
+import Modal from "../ui/modal/modal.component";
 import SettingsPanel from "./settings-panel/settings-panel.components";
 import SettingsContent from "./settings-content/settings-content.component";
 
 const roomSettings = props => (
-  <div>
-    <SettingsPanel></SettingsPanel>
-    <SettingsContent></SettingsContent>
+  <div className={props.className}>
+    <Modal className="settings-room-modal" show={props.toggleSettings}>
+      {/* <SettingsPanel></SettingsPanel> */}
+      {/* <SettingsContent></SettingsContent> */}
+    </Modal>
   </div>
 );
 
