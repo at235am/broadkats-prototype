@@ -7,13 +7,16 @@ import Logo from "../logo/logo.component";
 import CustomButton from "../custom-button/custom-button.component";
 import "./login-register-panel.styles.scss";
 
+let LoginComponent = <LogIn className="fields" />;
+let RegisterComponent = <Register className="fields"></Register>;
+
 class LoginRegisterPanel extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       tabSelected: "login",
-      panelRendered: <LogIn className="fields" />
+      panelRendered: LoginComponent
     };
   }
 
@@ -23,10 +26,10 @@ class LoginRegisterPanel extends React.Component {
 
     if (event.target.className.includes("login-tab-btn")) {
       selectedTab = "login";
-      componentToUse = <LogIn className="fields" />;
+      componentToUse = LoginComponent;
     } else {
       selectedTab = "register";
-      componentToUse = <Register className="fields"></Register>;
+      componentToUse = RegisterComponent;
     }
 
     this.setState({
@@ -55,9 +58,6 @@ class LoginRegisterPanel extends React.Component {
           >
             Register
           </CustomButton>
-
-          {/* <div className="login-tab-btn" onClick={this.switchTo}></div> */}
-          {/* <div className="register-tab-btn" onclic></div> */}
         </div>
         <Logo className="logo-area" />
         {this.state.panelRendered}
