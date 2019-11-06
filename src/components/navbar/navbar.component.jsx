@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import CircleBtn from "../circle-btn/circle-btn.component";
-import Logo from "../logo/logo.component";
+import LogoHorizontal from "../logo/logo-horizontal.component";
 
 import { ReactComponent as NineDotIcon } from "../../assets/icons/nine-dots-solid.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-solid.svg";
@@ -18,7 +18,7 @@ const NavBar = () => (
     {/* LOGO: */}
     <div className="logo-section">
       <Link to="/login">
-        <Logo />
+        <LogoHorizontal />
       </Link>
     </div>
 
