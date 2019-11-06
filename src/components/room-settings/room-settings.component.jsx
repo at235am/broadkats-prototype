@@ -7,7 +7,12 @@ import SettingsContent from "./settings-content/settings-content.component";
 
 const roomSettings = props => (
   <div className={props.className}>
-    <Modal className="settings-room-modal" show={props.toggleSettings}>
+    <Modal
+      backdropClass="room-settings-backdrop"
+      modalClass="room-settings-modal"
+      // className="settings-room-modal"
+      show={props.toggleSettings}
+    >
       {/* <SettingsPanel></SettingsPanel> */}
       {/* <SettingsContent></SettingsContent> */}
     </Modal>

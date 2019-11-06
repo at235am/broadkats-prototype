@@ -34,15 +34,15 @@
   justify-content: center;
 }
 
-.settings-page {
+.room-settings-page {
   position: fixed;
-  height: 80%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
 
-  // margin: auto DOES NOT WORK
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
 
   z-index: 500;
 }

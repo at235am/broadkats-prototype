@@ -3,10 +3,16 @@
 @import "../../assets/font-stack";
 
 .room-settings {
-  display: grid;
+  // display: grid;
 
-  grid-template-columns: 30% auto;
+  // grid-template-columns: 30% auto;
+  display: grid;
   // grid-template-rows: auto;
+}
+
+.test {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .room-settings-panel {
@@ -18,9 +24,13 @@
 }
 
 .room-settings-modal {
-  position: fixed;
+  position: absolute;
   background-color: $greenmain;
 
   height: 100%;
   width: 100%;
+}
+
+.room-settings-backdrop {
+  background-color: thistle;
 }

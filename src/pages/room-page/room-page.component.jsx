@@ -52,7 +52,7 @@ class RoomPage extends Component {
         <RoomScreen className="room-screen-item" />
         {this.state.showSettings && (
           <RoomSettings
-            className="settings-page"
+            className="room-settings-page"
             toggleSettings={this.toggleSettings}
           ></RoomSettings>
         )}

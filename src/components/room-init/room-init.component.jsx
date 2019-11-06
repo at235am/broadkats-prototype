@@ -6,7 +6,11 @@ import Modal from "../ui/modal/modal.component";
 
 const roominit = props => (
   <div className={props.className}>
-    <Modal className="init-modal" show={props.closeInit}>
+    <Modal
+      backdropClass="init-backdrop"
+      modalClass="init-modal"
+      show={props.closeInit}
+    >
       <div className="init">
         <div className="init-room-title">
           <input
