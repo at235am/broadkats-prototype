@@ -26,7 +26,7 @@ const roomBar = props => {
   }
 
   return (
-    <div className="room-bar">
+    <div className={`room-bar ${props.className ? props.className : null}`}>
       <div className="room-title">
         <RoomTitle roomTitle={props.roomName}></RoomTitle>
         {tagsBar}

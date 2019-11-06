@@ -32,31 +32,24 @@ class RoomPage extends Component {
   };
 
   render() {
-    let initmodal = this.state.showInit ? (
-      <div className="modal-item">
-        <Modal show={this.closeInit}>
-          <Init tags={this.state.tags} roomName={this.state.roomName} />
-        </Modal>
-      </div>
-    ) : null;
-
-    let settingsmodal = this.state.showSettings ? (
-      <div className="modal-item">
-        <Modal show={this.toggleSettings}></Modal>
-      </div>
-    ) : null;
-
     return (
       <div className="room">
-        {initmodal}
+        {this.state.showInit && (
+          <Init
+            className="room-screen-item"
+            closeInit={this.closeInit}
+            tags={this.state.tags}
+            roomName={this.state.roomName}
+          />
+        )}
         <RoomBar
-          className="room-bar"
+          className="room-bar-item"
           roomName={this.state.roomName}
           tags={this.state.tags}
           toggleSettings={this.toggleSettings}
           exit={this.exit}
         />
-        <RoomScreen className="room-screen" />
+        <RoomScreen className="room-screen-item" />
       </div>
     );
   }
