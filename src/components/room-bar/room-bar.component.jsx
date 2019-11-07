@@ -13,7 +13,7 @@ import RoomButton from "./room-button/room-button.component";
 const roomBar = props => {
   let tagsBar = props.tags.map(tag => {
     return (
-      <div className="tags-display">
+      <div key={tag} className="tags-display">
         <Tag tag={tag}></Tag>
       </div>
     );
@@ -26,7 +26,7 @@ const roomBar = props => {
   }
 
   return (
-    <div className="room-bar">
+    <div className={`room-bar ${props.className ? props.className : null}`}>
       <div className="room-title">
         <RoomTitle roomTitle={props.roomName}></RoomTitle>
         {tagsBar}
@@ -37,7 +37,7 @@ const roomBar = props => {
       </div>
 
       <div className="settings-button">
-        <RoomButton svg={cog} toggle={props.toggleSettings}></RoomButton>
+        <RoomButton svg={cog} click={props.toggleSettings}></RoomButton>
       </div>
 
       <div className="refresh-button">

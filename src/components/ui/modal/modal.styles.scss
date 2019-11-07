@@ -1,14 +1,13 @@
 @import "../../../assets/colors";
 
 .modal {
-  background-color: $blackdark;
-
   border: 1px solid $black3;
   // border-radius: 1%;
 
-  // possibly change again
-  height: 30em;
-  width: 20em;
+  // DEFAULT VALUES ARE THE FOLLOWING:
+  // default unspecified as not overridden by props.className
+  // height: auto;
+  // width: auto;
 
   z-index: 400;
 

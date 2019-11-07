@@ -54,6 +54,17 @@
   border-bottom: 1px $greenhighlight;
 }
 
+.init-modal {
+  background-color: $blackdark;
+  height: 30em;
+  width: 20em;
+}
+
+.init-backdrop {
+  background-color: $blacklight;
+  opacity: 0.5;
+}
+
 .edit-tags {
   grid-column: 2;
   grid-row: 3;

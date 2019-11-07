@@ -10,12 +10,10 @@
 .room {
   order: 2;
   
-  // background-color: $black3;
   background-image: $bggradient;
 
-  // position: fixed;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
 
   padding: 0;
   margin: 0;
@@ -25,41 +23,39 @@
 
   display: grid;
 
-  grid-template-columns: 5% 90% 5% 0%;
+  // margin-left: 5%;
+  // margin-right: 5%;
+  // same behavior due to margins
+  // grid-template-columns: 100%;
+  grid-template-columns: 5% 90% 5%;
   grid-template-rows: 2% 7% 1% 85% 5%;
+}
+
+.room-screen-item {
+  grid-column: 2;
+  grid-row: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-settings-page {
+  position: absolute;
+  // FIX TO ADJUST TO SAMS NAV BAR HEIGHT!!!! figure out a way to calculate it >_>
+  height: 95vh;
+  width: 100%;
+
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   animation-name: color;
   animation-duration: 5s;
 }
 
-.room-screen {
-  grid-column: 2;
-  grid-row: 4;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-item {
-  grid-column: 2;
-  grid-row: 4;
-
-  height: 100%;
-  width: 100%;
-
-  z-index: 200;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.settings-page {
-  position: fixed;
-}
-
-.room-bar {
+.room-bar-item {
   grid-column: 2;
   grid-row: 2;
 
@@ -76,6 +72,6 @@
     background-color: $greenmain;
   }
   to {
-    background-color: $black3;
+    background-color: $transparentPink;
   }
 }

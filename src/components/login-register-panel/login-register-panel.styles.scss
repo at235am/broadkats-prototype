@@ -10,8 +10,12 @@
   line-height: 2.9em;
 
   &:hover {
-    background-color: $black5;
+    background-color: $greenmain;
     border-bottom: none;
+  }
+
+  &:active {
+    background-color: $black5;
   }
 }
 
