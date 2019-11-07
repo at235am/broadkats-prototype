@@ -1,11 +1,22 @@
 @import "../../assets/dimensions";
 @import "../../assets/colors";
 
+@mixin font {
+  display: flex;
+  justify-content: center;
+
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .newroom-container {
   box-sizing: border-box;
   background-color: $black5;
   width: 15em;
-  padding: 0.5em;
+  padding: 1em;
 
   display: flex;
   flex-direction: column;
@@ -14,13 +25,17 @@
   .header {
     grid-area: header;
 
+    background-color: $black6;
+    height: 2em;
+
     display: flex;
     justify-content: center;
+    align-items: center;
 
     font-family: "Open Sans Condensed";
     font-weight: bold;
     color: white;
-    font-size: 1em;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -31,14 +46,55 @@
 
   .tags-container {
     grid-area: tags;
+    background-color: $black6;
+    @include font;
   }
 
-  .settings-privacy {
+  .settings {
     grid-area: privacy;
+    background-color: $black6;
+
+    @include font;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    svg:nth-child(1) {
+      width: 10px;
+      path {
+        fill: $white;
+      }
+    }
+
+    .values {
+      padding: 0 1em;
+      @include font;
+      font-size: 15px;
+      text-transform: lowercase;
+      font-weight: 100;
+    }
+
+    svg:nth-child(3) {
+      width: 10px;
+      path {
+        fill: $white;
+      }
+    }
   }
 
   .settings-room-type {
     grid-area: type;
+    background-color: $black6;
+    @include font;
   }
 
   .new-room-btn {
@@ -46,6 +102,6 @@
   }
 
   .gap {
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
   }
 }

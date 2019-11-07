@@ -3,6 +3,10 @@ import React from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
+import { ReactComponent as LeftArrowIcon } from "../../assets/icons/caret-left-solid.svg";
+import { ReactComponent as RightArrowIcon } from "../../assets/icons/caret-right-solid.svg";
+import { ReactComponent as PlusIcon } from "../../assets/icons/plus-solid.svg";
+
 import "./new-room.styles.scss";
 
 const NewRoom = () => (
@@ -19,9 +23,25 @@ const NewRoom = () => (
       value=""
       required
     />
-    <div className="tags-container gap">sdfsdfdsf</div>
-    <div className="settings-privacy gap">sdfsdfdsf</div>
-    <div className="settings-room-type gap">sdfsdfdsf</div>
+    <div className="tags-container gap">Add Tags</div>
+    <div className="toggle-container">
+      <PlusIcon />
+      <div className="values">nsfw</div>
+    </div>
+
+    <div className="settings gap">Privacy</div>
+    <div className="toggle-container">
+      <LeftArrowIcon />
+      <div className="values">Private</div>
+      <RightArrowIcon />
+    </div>
+
+    <div className="settings gap">Room Type</div>
+    <div className="toggle-container">
+      <LeftArrowIcon />
+      <div className="values">Theatre</div>
+      <RightArrowIcon />
+    </div>
     <CustomButton className="new-room-btn">Create Room</CustomButton>
   </div>
 );
