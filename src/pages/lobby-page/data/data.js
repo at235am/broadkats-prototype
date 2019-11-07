@@ -5,7 +5,7 @@ const data = {
             "index": 0,
             "name": "Anime Room",
             "tags": "Animation, Action",
-            "picture": "",
+            "picture": "https://cdn.vox-cdn.com/thumbor/PdZbmB57vB9M-oFxApdoaI3oPF0=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/65162399/ply0947_fall_reviews_2019_tv_anime.0.jpg",
             "isOwner": false
         },
         {
@@ -13,7 +13,7 @@ const data = {
             "index": 1,
             "name": "The Office",
             "tags": "Comedy",
-            "picture": "",
+            "picture": "https://img.nbc.com/sites/nbcunbc/files/images/2016/1/19/MDot-TheOffice-640x360-MP.jpg",
             "isOwner": true
         },
         {
@@ -21,7 +21,7 @@ const data = {
             "index": 2,
             "name": "Twitch Stream",
             "tags": "Misc",
-            "picture": "",
+            "picture": "https://securingtomorrow.mcafee.com/wp-content/uploads/2018/11/twitch.jpg",
             "isOwner": false
         },
         {
@@ -29,7 +29,7 @@ const data = {
             "index": 3,
             "name": "Jonas Brothers Marathon",
             "tags": "Music",
-            "picture": "",
+            "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/kevin-1559319020.png",
             "isOwner": false
         },
         {
@@ -37,7 +37,7 @@ const data = {
             "index": 4,
             "name": "Family Guy",
             "tags": "Animation, TV Show",
-            "picture": "",
+            "picture": "https://assets.change.org/photos/5/uf/vg/cBUfVGBNGKfVaJt-1600x900-noPad.jpg?1517447658",
             "isOwner": false
         },
         {
@@ -45,7 +45,7 @@ const data = {
             "index": 5,
             "name": "Harry Potts",
             "tags": "Movie, Fantasy",
-            "picture": "",
+            "picture": "https://timedotcom.files.wordpress.com/2014/07/301386_full1.jpg",
             "isOwner": false
         }
     ]

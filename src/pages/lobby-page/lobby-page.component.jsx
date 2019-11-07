@@ -39,24 +39,20 @@ class LobbyPage extends Component{
             <div className="container">
                 <div id='active_header' className='header'>ACTIVE ROOMS</div>
                 <div className="active-container">
-                    <div className="cards-carousel">
-                        <div className="cards-carousel-wrapper" style={slide}>
-                            {
-                                properties.map(property=> 
-                                <div>
-                                    <p className='title'>{property.name}</p>
-                                    <Card key={ property.roomID } property={ property }></Card>
-                                    <p className='title'>TAGS: {property.tags}</p>
-                                </div>
-                                )
-                            }
-                        </div>
+                    <div className="cards-carousel-wrapper" style={slide}>
+                        {
+                            properties.map(property=> 
+                            <div className="zoom">
+                                <Card key={ property.roomID } property={ property }></Card>
+                            </div>
+                            )
+                        }
                     </div>
                 </div>
                 <img className="back-btn" src="https://image.flaticon.com/icons/svg/126/126492.svg" onClick={
-                            () => this.prevProperty()} disabled={property.index === data.properties.length-1}></img>
-                <img className="next-btn" src="https://image.flaticon.com/icons/svg/126/126490.svg" onClick={
-                            () => this.nextProperty()} disabled={property.index === data.properties.length-1}></img>
+                            () => this.prevProperty()} disabled={property.index === 0}></img>
+                <img className="next-btn" src="https://image.flaticon.com/icons/svg/126/126490.svg" disabled={property.index === data.properties.length-3}
+                 onClick={() => this.nextProperty()}></img>
                 {/* <button className='back-btn' onClick={() => this.prevProperty()} disabled={property.index === 0}>
                     Prev
                 </button>
@@ -68,7 +64,7 @@ class LobbyPage extends Component{
                     <div className="cards-grid">
                     {
                         properties.map(property=> 
-                        <div>
+                        <div className="zoom">
                             {/* <p className='title'>{property.name}</p> */}
                             <Card key={ property.roomID } property={ property }></Card>
                             {/* <p className='title'>Tags: {property.tags}</p> */}

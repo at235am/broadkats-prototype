@@ -6,13 +6,12 @@ const Card = ({property}) => {
     const {index, isOwner, picture, name, tags} = property;
     return (
         <div id={'card-${index}'} className="card">
-            <img src={picture} />
-            <div className="details">
-                {/* <span className="owner">{isOwner}</span>
-                <p className="name">{name}</p>
-                <ul className="tags">
-                    <p className="genre">{tags}</p>
-                </ul> */}
+            <div className="img-container">
+                <img src={picture} />
+            </div>
+            <div className="description">
+                <p>{name}</p>
+                <p>TAGS: {tags}</p>
             </div>
         </div>
     )

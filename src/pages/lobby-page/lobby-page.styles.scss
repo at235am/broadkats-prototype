@@ -8,15 +8,13 @@
     // overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr 4.5fr 1fr;
-    grid-template-rows: 1fr 300px 1fr 1fr 600px;
+    grid-template-rows: 80px 300px 600px;
     // grid-template-columns: fit-content;
     // grid-template-rows: 1fr 2fr 1fr;
-  
+    background-color: $blackdark;
     grid-template-areas:
       ". active-header ."
       "back-btn active next-btn"
-      ". active ."
-      ". featured-header ."
       ". featured .";
 }
 
@@ -47,17 +45,13 @@
 
 .featured-container {
     grid-area: featured;
-    // display: grid;
-    // grid-template-columns: 1fr 4.5fr 1fr;
-    // grid-template-rows: 1fr 2fr 1fr;
-    // grid-template-areas: 
-    // ". . ."
-    // ". . ."
-    // ". . .";
+    overflow: hidden;
 }
-
+p{
+    padding: 0px;
+    margin: 0;
+}
 .button {
-    // display: inline-block;
     float: left;
 }
 
@@ -65,19 +59,19 @@
     text-align: left;
     vertical-align: text-bottom;
     padding-left: 30px;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: lighter;
     color: $greenmain;
     margin: 0;
     border-bottom: 5px solid $greenmain;
     // font-weight: bold;
-    font-style: italic;
+    // font-style: italic;
 }
 
 #active_header{
     grid-area: active-header;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 20px;
 }
 
 #featured_header{
