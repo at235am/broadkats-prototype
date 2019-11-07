@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CircleBtn from "../circle-btn/circle-btn.component";
 import LogoHorizontal from "../logo/logo-horizontal.component";
 import Poppity from "../Poppity/poppity.component";
+import Login from "../login/login.component";
 
 import { ReactComponent as NineDotIcon } from "../../assets/icons/nine-dots-solid.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-solid.svg";
@@ -13,6 +14,7 @@ import { ReactComponent as PeopleIcon } from "../../assets/icons/user-circle-sol
 import { ReactComponent as XIcon } from "../../assets/icons/times-solid.svg";
 
 import "./navbar.styles.scss";
+import LoginRegisterPanel from "../login-register-panel/login-register-panel.component";
 
 const NavBar = () => (
   <div className="navbar-container">
@@ -61,7 +63,7 @@ const NavBar = () => (
 
     {/* SITE NAV */}
     <div className="site-nav">
-      <Poppity arrowGap="45" alignArrow="right">
+      <Poppity arrowGap="45" alignArrow="right" content={<Login />}>
         <CircleBtn className="more-pages-btn" icon={<BarsIcon />}></CircleBtn>
       </Poppity>
 

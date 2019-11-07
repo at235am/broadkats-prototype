@@ -3,7 +3,7 @@ import React from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { ReactComponent as GoogleLogoColorful } from "../../assets/icons/google-logo-colorful.svg";
-import { ReactComponent as GoogleLogo } from "../../assets/icons/google-logo-solid.svg";
+// import { ReactComponent as GoogleLogo } from "../../assets/icons/google-logo-solid.svg";
 
 import "./login.styles.scss";
 
