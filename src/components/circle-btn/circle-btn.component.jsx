@@ -2,8 +2,15 @@ import React from "react";
 
 import "./circle-btn.styles.scss";
 
-const CircleBtn = ({ className, icon, text }) => (
-  <div className={`circle-btn ${className ? className : ""}`}>
+const CircleBtn = ({
+  onClick,
+  children,
+  className,
+  icon,
+  text,
+  ...otherProps
+}) => (
+  <div onClick={onClick} className={`circle-btn ${className ? className : ""}`}>
     {(() => {
       if (icon) {
         return icon;

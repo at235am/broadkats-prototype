@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import CircleBtn from "../circle-btn/circle-btn.component";
 import LogoHorizontal from "../logo/logo-horizontal.component";
+import Poppity from "../Poppity/poppity.component";
 
 import { ReactComponent as NineDotIcon } from "../../assets/icons/nine-dots-solid.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-solid.svg";
@@ -30,15 +31,23 @@ const NavBar = () => (
           icon={<NineDotIcon />}
         />
       </Link>
-
       <CircleBtn
         className="room-nav-btn search-btn circle-hover"
         icon={<SearchIcon />}
       />
-      <CircleBtn
+
+      {/* <CircleBtn
         className="room-nav-btn create-room-btn circle-hover"
         icon={<PlusIcon />}
-      />
+      ></CircleBtn>
+
+      <Poppity arrowGap="45" alignArrow="center"></Poppity> */}
+      <Poppity arrowGap="45" alignArrow="center">
+        <CircleBtn
+          className="room-nav-btn create-room-btn circle-hover"
+          icon={<PlusIcon />}
+        ></CircleBtn>
+      </Poppity>
       <Link to="/room">
         <CircleBtn className="room-nav-btn room-btn circle-hover" text="a" />
       </Link>
@@ -52,7 +61,10 @@ const NavBar = () => (
 
     {/* SITE NAV */}
     <div className="site-nav">
-      <CircleBtn className="more-pages-btn" icon={<BarsIcon />} />
+      <Poppity arrowGap="45" alignArrow="right">
+        <CircleBtn className="more-pages-btn" icon={<BarsIcon />}></CircleBtn>
+      </Poppity>
+
       <CircleBtn className="user-settings-btn" icon={<PeopleIcon />} />
       <CircleBtn className="logout-btn" icon={<XIcon />} />
     </div>
