@@ -5,6 +5,7 @@ import CircleBtn from "../circle-btn/circle-btn.component";
 import LogoHorizontal from "../logo/logo-horizontal.component";
 import Poppity from "../Poppity/poppity.component";
 import Login from "../login/login.component";
+import NewRoom from "../new-room/new-room.component";
 
 import { ReactComponent as NineDotIcon } from "../../assets/icons/nine-dots-solid.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-solid.svg";
@@ -44,7 +45,7 @@ const NavBar = () => (
       ></CircleBtn>
 
       <Poppity arrowGap="45" alignArrow="center"></Poppity> */}
-      <Poppity arrowGap="45" alignArrow="center">
+      <Poppity arrowGap="48" alignArrow="center" content={<NewRoom />}>
         <CircleBtn
           className="room-nav-btn create-room-btn circle-hover"
           icon={<PlusIcon />}
@@ -63,7 +64,7 @@ const NavBar = () => (
 
     {/* SITE NAV */}
     <div className="site-nav">
-      <Poppity arrowGap="45" alignArrow="right" content={<Login />}>
+      <Poppity arrowGap="48" alignArrow="right" content={<Login />}>
         <CircleBtn className="more-pages-btn" icon={<BarsIcon />}></CircleBtn>
       </Poppity>
 

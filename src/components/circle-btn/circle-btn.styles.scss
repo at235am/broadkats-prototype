@@ -21,13 +21,13 @@
     transition-property: transform background-color;
   }
 
-  &.circle-btn:hover {
+  &:hover {
     & > svg {
       transform: rotate(360deg);
     }
   }
 
-  .circle-btn:active {
+  &:active {
     background-color: #ffffff;
   }
 }

@@ -38,6 +38,7 @@ class Poppity extends React.Component {
     console.log(this.props.content);
     return (
       <div className="poppity-container">
+        <div className={`shadow ${this.state.enabled ? "" : "disabled"}`}></div>
         {newChildWithOnClick}
 
         <div className="pop-up-container">
@@ -48,6 +49,7 @@ class Poppity extends React.Component {
             <div className={`dropdown-container ${this.setAlignment()}`}>
               {this.props.content}
             </div>
+            {/* <div className="shadow"></div> */}
           </div>
         </div>
       </div>
