@@ -2,6 +2,8 @@ import React from "react";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
+import { ReactComponent as GoogleLogoColorful } from "../../assets/icons/google-logo-colorful.svg";
+// import { ReactComponent as GoogleLogo } from "../../assets/icons/google-logo-solid.svg";
 
 import "./login.styles.scss";
 
@@ -60,7 +62,8 @@ class LogIn extends React.Component {
           </CustomButton>
 
           <CustomButton className="google-login-btn" type="submit">
-            google login
+            <GoogleLogoColorful />
+            Google Login
           </CustomButton>
 
           <a className="forgot-pw" href="/login">

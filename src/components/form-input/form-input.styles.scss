@@ -31,7 +31,7 @@
     font-size: 0.9em;
 
     border: none;
-    border-radius: 0;
+    border-radius: $defaultedgeradius;
     border-bottom: 5px solid $greenmain;
 
     &:focus {

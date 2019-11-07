@@ -7,6 +7,8 @@
   min-width: 5em;
   width: auto;
   height: $defaultbtnheight;
+  padding: 0;
+  box-sizing: border-box;
 
   font-family: "Open Sans Condensed";
   font-weight: bold;
@@ -14,22 +16,27 @@
   font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  line-height: 3.3em;
 
-  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: $defaultedgeradius;
+
   border: none;
   cursor: pointer;
-  box-sizing: border-box;
 
-  transition-duration: 100ms;
-  transition-property: border-bottom;
+  transition-duration: 200ms;
+  transition-property: box-shadow;
 
   &:focus {
     outline: 0;
   }
 
   &:hover {
-    border-bottom: 5px solid $greenmain;
+    // border-bottom: 5px solid $greenmain;
+    // box-shadow: 0 5px 0 0px $greenmain;
+    box-shadow: inset 0 -5px 0 0 $greenmain;
     // background-color: white;
     // color: black;
   }

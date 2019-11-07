@@ -1,4 +1,5 @@
 @import "../../assets/colors.scss";
+@import "../../assets/dimensions.scss";
 
 .login-container {
   .form-container {
@@ -36,6 +37,11 @@
     .google-login-btn {
       grid-area: glogin-btn;
       margin-bottom: 1em;
+
+      svg {
+        width: 1.5em;
+        margin-right: 0.5em;
+      }
     }
 
     .forgot-pw {
