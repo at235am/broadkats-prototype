@@ -1,0 +1,109 @@
+@import "../../assets/colors";
+@import "../../assets/font-stack";
+
+.init {
+  background-color: transparent;
+
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 3% 31% 31% 31% 3%;
+}
+
+.init-room-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.init-room-title-input {
+  font-family: $fontfamily;
+  // change
+  font-size: 2em;
+  color: $white;
+
+  height: auto;
+  width: auto;
+
+  text-align: center;
+
+  fill: none;
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  border-bottom: 2px solid $greenmain;
+  box-shadow: none;
+
+  margin: 2%;
+
+  //   box-sizing: border-box;
+}
+
+.init-room-title-input:focus,
+.init-room-title-input:active {
+  outline: none;
+  background: transparent;
+  border-bottom: 1px $greenhighlight;
+}
+
+.init-modal {
+  background-color: $blackdark;
+  height: 30em;
+  width: 20em;
+}
+
+.init-backdrop {
+  background-color: $blacklight;
+  opacity: 0.5;
+}
+
+.edit-tags {
+  grid-column: 2;
+  grid-row: 3;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.start {
+  grid-column: 2;
+  grid-row: 4;
+
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button {
+  font-family: $fontfamily;
+  // change
+  font-weight: bold;
+  font-size: 2em;
+  color: $white;
+
+  border: none;
+  border-radius: 10%;
+
+  background-color: $greenmain;
+  height: auto;
+  width: auto;
+}
+
+.start-button:hover {
+  background-color: $greenhighlight;
+
+  height: auto;
+  width: auto;
+
+  cursor: pointer;
+}

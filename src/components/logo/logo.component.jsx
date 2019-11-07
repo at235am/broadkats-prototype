@@ -1,13 +1,17 @@
 import React from "react";
 
-import CircleBtn from "../circle-btn/circle-btn.component";
+import { ReactComponent as MinBLogoTypeface } from "../../assets/logo-icons/min-b-typeface.svg";
+import { ReactComponent as MinBLogoVectorArt } from "../../assets/logo-icons/min-b-vector-art.svg";
 
 import "./logo.styles.scss";
 
 const Logo = ({ className, ...otherProps }) => (
   <div className={`logo-container ${className ? className : ""}`}>
-    <div className="logo-text">BROADKATS</div>
-    <CircleBtn text="me" />
+    <MinBLogoVectorArt />
+    <MinBLogoTypeface />
+
+    {/* <div className="logo-text">BROADKATS</div> */}
+    {/* <CircleBtn text="me" /> */}
   </div>
 );
 

@@ -5,6 +5,9 @@ import data from "./data/data"
 import BackArrowIcon from "../../assets/icons/back-arrow.svg";
 import NextArrowIcon from "../../assets/icons/next-arrow.svg";
 
+import Sidebar from "../../components/sidebar/sidebar.component";
+import CollapsibleContent from "../../components/collapsible-content/collapsible-content.component";
+
 import "./lobby-page.styles.scss";
 
 class LobbyPage extends Component{
@@ -36,6 +39,19 @@ class LobbyPage extends Component{
             transform: `translateX(${-property.index*(100/properties.length)}%)` 
         };
         return(
+        <div className="bigger-container">
+            <Sidebar side="left" visible="false">
+                <CollapsibleContent
+                    id="collapsible-activity"
+                    label="Activity"
+                    content={"WHATEVER"}
+                />
+                <CollapsibleContent
+                    id="collapsible-friends"
+                    label="Friends"
+                    content={"WHATEVER2"}
+                />
+            </Sidebar>
             <div className="container">
                 <div id='active_header' className='header'>ACTIVE ROOMS</div>
                 <div className="active-container">
@@ -73,6 +89,7 @@ class LobbyPage extends Component{
                     }
                     </div>
                 </div>
+            </div>
             </div>
         );
     }

@@ -1,0 +1,17 @@
+@import "../../../assets/colors";
+
+.modal {
+  border: 1px solid $black3;
+  // border-radius: 1%;
+
+  // DEFAULT VALUES ARE THE FOLLOWING:
+  // default unspecified as not overridden by props.className
+  // height: auto;
+  // width: auto;
+
+  z-index: 400;
+
+  // unnecessary
+  box-sizing: border-box;
+  position: absolute;
+}

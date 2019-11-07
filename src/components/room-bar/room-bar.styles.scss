@@ -1,0 +1,64 @@
+@import "../../assets/colors";
+@import "../../assets/dimensions";
+
+.room-bar {
+  background-color: transparent;
+
+  height: auto;
+  width: auto;
+
+  // change
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  // grid-template-columns: auto 1fr $roombuttonsize $roombuttonsize $roombuttonsize $roombuttonsize;
+  // grid-template-areas: "title tag favorite-button settings-button refresh-button exit-button";
+  grid-template-columns: 1fr $roombuttonsize $roombuttonsize $roombuttonsize $roombuttonsize;
+  grid-template-areas: "title favorite-button settings-button refresh-button exit-button";
+  // change
+  grid-gap: 5px;
+
+  align-content: center;
+}
+
+.room-title {
+  grid-area: title;
+}
+
+.room-title:hover .tags-display {
+  // grid-area: tags;
+  display: flex;
+
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+
+  // change
+  margin: 0.2em;
+  box-sizing: border-box;
+}
+
+.tags-display {
+  grid-area: tags;
+  display: none;
+}
+
+.favorite-button {
+  grid-area: favorite-button;
+}
+
+.settings-button {
+  grid-area: settings-button;
+}
+
+.refresh-button {
+  grid-area: refresh-button;
+}
+
+.exit-button {
+  grid-area: exit-button;
+}

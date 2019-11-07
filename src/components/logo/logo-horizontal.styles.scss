@@ -1,0 +1,54 @@
+@import "../../assets/colors";
+
+@mixin rotateAnimation {
+  cursor: pointer;
+
+  transition-duration: 200ms;
+  transition-property: transform background-color;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+
+  &:active {
+    background-color: #ffffff;
+  }
+}
+
+.logo-h-container {
+  grid-area: page;
+  // margin: 0 1em;
+  // background-color: $blacklight;
+
+  // box-sizing: border-box;
+  width: -moz-fit-content; // firefox
+  // width: -webkit-fit-content; // chrome // unfortunately only one of these work at a time rn
+  display: flex;
+  // background: white;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .logo-text {
+    color: $greenmain;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 0.2em;
+  }
+
+  svg:nth-child(1) {
+    width: 3em;
+    path {
+      fill: $greenmain;
+    }
+    @include rotateAnimation;
+  }
+
+  svg:nth-child(2) {
+    width: 8em;
+    path {
+      fill: $greenmain;
+    }
+  }
+}

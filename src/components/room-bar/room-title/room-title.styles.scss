@@ -1,0 +1,20 @@
+@import "../../../assets/colors";
+@import "../../../assets/font-stack";
+
+.room-title {
+  background-color: transparent;
+
+  height: 100%;
+  width: auto;
+
+  font-family: $fontfamily;
+  font-size: $roomtitle;
+
+  color: $white;
+
+  // unnecessary
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}

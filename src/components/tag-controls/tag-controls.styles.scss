@@ -1,0 +1,27 @@
+@import "../../assets/colors";
+@import "../../assets/dimensions";
+@import "../../assets/font-stack";
+
+.tag-controls {
+  height: 100%;
+  width: 100%;
+
+  // padding: 1%;
+  // margin: 1em;
+  // unnecessary
+  box-sizing: border-box;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  align-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tag-control {
+  // edit to global variable for appropriate tag sizing
+  height: 1em;
+  // possibly change to em later
+  width: 100%;
+}

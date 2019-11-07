@@ -1,0 +1,37 @@
+@import "../../../assets/colors";
+@import "../../../assets/dimensions";
+@import "../../../assets/font-stack";
+
+@media (min-width: 500px) {
+  .tag-button {
+    background-color: $greenmain;
+
+    height: $tagsize;
+    width: $tagsize;
+
+    border: none;
+    border-radius: 10%;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tag-button img {
+    padding: 20%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tag-button:hover {
+    height: $tagsize;
+    width: $tagsize;
+    background-color: $greenhighlight;
+    cursor: pointer;
+  }
+}
