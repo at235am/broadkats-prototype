@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./room-settings.styles.scss";
 
 import Modal from "../ui/modal/modal.component";
-import SettingsPanel from "./settings-panel/settings-panel.components";
-import SettingsContent from "./settings-content/settings-content.component";
+import Tabs from "../tabs/tabs.component";
 
 class RoomSettings extends Component {
   state = {
@@ -25,12 +24,19 @@ class RoomSettings extends Component {
           show={this.props.toggleSettings}
         >
           <div className="room-settings">
-            <SettingsPanel
-              className="room-settings-panel"
-              settingsNames={this.state.settingsNames}
-              onClick={() => this.selectSetting}
-            ></SettingsPanel>
-            <SettingsContent className="room-settings-content"></SettingsContent>
+            <Tabs
+              tab="room-settings-tab"
+              tabSidePanel="room-settings-panel"
+              tabContents="room-settings-content"
+            >
+              <div className="demo-1" name="PRIVACY"></div>
+              <div className="demo-2" name="OPERATOR ACCESS"></div>
+              <div className="demo-3" name="VOLUME CONTROL"></div>
+              <div className="demo-4" name="VOICE CHAT"></div>
+              <div className="demo-5" name="VIDEO/AUDIO"></div>
+              <div className="demo-6" name="USER REPORTS"></div>
+              <div name="DELETE ROOM"></div>
+            </Tabs>
           </div>
         </Modal>
       </div>

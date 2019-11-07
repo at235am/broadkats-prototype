@@ -34,6 +34,7 @@ class Tabs extends Component {
   render() {
     let tabs = React.Children.map(this.props.children, (child, i) => (
       <Tab
+        tab={this.props.tab ? this.props.tab : null}
         key={i}
         name={child.props.name}
         content={child}
@@ -42,17 +43,17 @@ class Tabs extends Component {
     ));
 
     return (
-      <div className="tabs">
+      <div className={`tabs ${this.props.tabs ? this.props.tabs : null}`}>
         <div
           className={`tab-side-panel ${
-            this.props.className ? this.props.className : null
+            this.props.tabSidePanel ? this.props.tabSidePanel : null
           }`}
         >
           {tabs}
         </div>
         <div
           className={`tab-contents ${
-            this.props.className ? this.props.className : null
+            this.props.tabContents ? this.props.tabContents : null
           }`}
         >
           {this.renderActive()}
