@@ -5,17 +5,13 @@
   height: 100%;
   // box-sizing: border-box;
   background-color: #1f1f1f;
-  transition-duration: 300ms;
-  transition-property: border-bottom;
+
+  transition-duration: 200ms;
+  transition-property: box-shadow;
   line-height: 2.9em;
 
   &:hover {
-    background-color: $greenmain;
-    border-bottom: none;
-  }
-
-  &:active {
-    background-color: $black5;
+    box-shadow: inset 0 5px 0 0 $greenmain;
   }
 }
 
