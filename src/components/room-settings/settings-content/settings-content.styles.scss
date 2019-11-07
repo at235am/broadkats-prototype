@@ -3,6 +3,10 @@
 @import "../../../assets/font-stack";
 
 .settings-content {
+  height: 100%;
+  width: auto;
+
+  display: flex;
 }
 
 .settings-description {

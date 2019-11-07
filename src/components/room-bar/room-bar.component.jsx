@@ -13,7 +13,7 @@ import RoomButton from "./room-button/room-button.component";
 const roomBar = props => {
   let tagsBar = props.tags.map(tag => {
     return (
-      <div className="tags-display">
+      <div key={tag} className="tags-display">
         <Tag tag={tag}></Tag>
       </div>
     );

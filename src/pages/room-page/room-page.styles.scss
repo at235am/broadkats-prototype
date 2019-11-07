@@ -2,13 +2,39 @@
 @import "../../assets/dimensions";
 @import "../../assets/font-stack";
 
+.bleh {
+  display: flex;
+}
+.test {
+  height: 50px;
+  width: 50px;
+  background-color: hotpink;
+}
+.test1 {
+  height: 50px;
+  width: 50px;
+  background-color: blueviolet;
+}
+.test2 {
+  height: 50px;
+  width: 50px;
+  background-color: goldenrod;
+}
+.test3 {
+  height: 50px;
+  width: 50px;
+  background-color: rosybrown;
+}
+.test4 {
+  height: 50px;
+  width: 50px;
+  background-color: mintcream;
+}
 .room {
-  // background-color: $black3;
   background-image: $bggradient;
 
-  // position: fixed;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
 
   padding: 0;
   margin: 0;
@@ -18,11 +44,12 @@
 
   display: grid;
 
-  grid-template-columns: 5% 90% 5% 0%;
+  // margin-left: 5%;
+  // margin-right: 5%;
+  // same behavior due to margins
+  // grid-template-columns: 100%;
+  grid-template-columns: 5% 90% 5%;
   grid-template-rows: 2% 7% 1% 85% 5%;
-
-  animation-name: color;
-  animation-duration: 5s;
 }
 
 .room-screen-item {
@@ -35,16 +62,18 @@
 }
 
 .room-settings-page {
-  position: fixed;
-  height: 90%;
-  width: 90%;
-
-  margin: auto;
-  // left: 50%;
-  // top: 50%;
-  // transform: translate(-50%, -50%);
+  position: absolute;
+  // FIX TO ADJUST TO SAMS NAV BAR HEIGHT!!!! figure out a way to calculate it >_>
+  height: 95vh;
+  width: 100%;
 
   z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation-name: color;
+  animation-duration: 5s;
 }
 
 .room-bar-item {
@@ -64,6 +93,6 @@
     background-color: $greenmain;
   }
   to {
-    background-color: $black3;
+    background-color: $transparentPink;
   }
 }

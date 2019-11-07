@@ -2,11 +2,11 @@ import React from "react";
 import "./settings-panel.styles.scss";
 
 const settingsPanel = props => {
-  let settingsLabels = props.settings.map(settings => (
-    <button className="settings-label">{settings}</button>
+  let settingsLabels = props.settingsNames.map(settingsName => (
+    <button className="settings-label">{settingsName}</button>
   ));
 
-  return <div>{settingsLabels}</div>;
+  return <div className="settings-panel">{settingsLabels}</div>;
 };
 
 export default settingsPanel;

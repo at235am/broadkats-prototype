@@ -3,21 +3,33 @@
 @import "../../../assets/font-stack";
 
 .settings-panel {
-  height: auto;
+  height: 100%;
   width: auto;
+  // width: fit-content;
 
   display: flex;
   flex-flow: column;
 
   background-color: $black3;
+
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  border-right: 1px solid $greenhighlight;
 }
 
 .settings-label {
   font-family: $fontfamily;
+  // font-weight: bold;
   font-size: $generaltext;
 
-  height: 100%;
-  width: 100%;
+  text-align: left;
+
+  color: $white;
+
+  height: auto;
+  width: auto;
 
   border: none;
   background-color: transparent;

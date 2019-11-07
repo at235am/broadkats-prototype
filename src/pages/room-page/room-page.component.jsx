@@ -7,12 +7,38 @@ import RoomSettings from "../../components/room-settings/room-settings.component
 import Init from "../../components/room-init/room-init.component";
 
 // Test imports
+import Tabs from "../../components/tabs/tabs.component";
 
 class RoomPage extends Component {
   state = {
     showInit: true,
     showSettings: false,
-    settings: ["Public Room"],
+    settings: [
+      {
+        title: "Privacy",
+        header: "This is your settings for privacy.",
+        description: "I'm a description.",
+        value: false
+      },
+      {
+        title: "Test A",
+        header: "This is your settings for test a.",
+        description: "I'm a description.",
+        value: false
+      },
+      {
+        title: "Test B",
+        header: "This is your settings for test b.",
+        description: "I'm a description.",
+        value: false
+      },
+      {
+        title: "Test C",
+        header: "This is your settings for test c.",
+        description: "I'm a description.",
+        value: false
+      }
+    ],
     tags: ["Horror", "Suspense", "Angst", "Thriller", "Romance", "NSFW"],
     roomName: "YUMMY"
   };
@@ -53,8 +79,9 @@ class RoomPage extends Component {
         {this.state.showSettings && (
           <RoomSettings
             className="room-settings-page"
+            settings={this.state.settings}
             toggleSettings={this.toggleSettings}
-          ></RoomSettings>
+          />
         )}
       </div>
     );

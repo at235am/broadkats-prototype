@@ -3,34 +3,33 @@
 @import "../../assets/font-stack";
 
 .room-settings {
-  // display: grid;
+  height: 100%;
+  width: 100%;
 
-  // grid-template-columns: 30% auto;
   display: grid;
-  // grid-template-rows: auto;
-}
-
-.test {
-  grid-column: 1;
-  grid-row: 1;
+  // SETTINGS SIZE change
+  grid-template-columns: 10em auto;
+  grid-template-rows: auto;
 }
 
 .room-settings-panel {
   grid-column: 1;
+  // float: left;
 }
 
 .room-settings-content {
   grid-column: 2;
+  // float: right;
 }
 
 .room-settings-modal {
   position: absolute;
-  background-color: $greenmain;
+  background-color: $black3;
 
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
 }
 
 .room-settings-backdrop {
-  background-color: thistle;
+  background-color: $transparentPink;
 }
