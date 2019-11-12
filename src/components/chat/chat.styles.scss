@@ -1,0 +1,61 @@
+@import "../../assets/colors";
+
+.chatContainer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.chatHistory {
+	display: block;
+	order: 1;
+	flex-grow: 1;
+
+	min-height: 50%;
+	height: auto;
+}
+
+.chatTextInput{
+	display: block;
+	order: 2;
+	flex-shrink: 0;
+
+    max-height: 40%;
+
+    background-color: $white;
+    border-bottom: 5px solid $greenmain;
+
+    font-family: "Open Sans Condensed";
+    font-weight: bold;
+    color: $black3;
+    font-size: 0.9em;
+
+    overflow: hidden;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+
+}
+
+.chatButtons{
+	display: block;
+	order: 3;	
+	flex-shrink: 0;
+
+	min-height: auto;
+	height: auto;
+	max-height: auto;
+
+	margin: 2%;
+	padding: 2%;
+	
+	.send {
+		float: right;
+	}
+
+	.attach {
+		float: left;
+	}
+}

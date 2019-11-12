@@ -7,7 +7,7 @@ import RoomScreen from "../../components/room-screen/room-screen.component";
 import RoomBar from "../../components/room-bar/room-bar.component";
 import RoomSettings from "../../components/room-settings/room-settings.component";
 import Init from "../../components/room-init/room-init.component";
-
+import Chat from "../../components/chat/chat.component.jsx";
 // Test imports
 import Tabs from "../../components/tabs/tabs.component";
 
@@ -71,9 +71,7 @@ class RoomPage extends Component {
           />
         </Sidebar>
         <Sidebar side="right" visible="true">
-          <CollapsibleContent id="collapsible-CHAT" label="Chat"
-          content={"PEOPLE TALKING WILL GO HERE I GWUESS"}
-          />
+          <Chat/>
         </Sidebar>
         <div className="room">
           {this.state.showInit && (
